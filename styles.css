@@ -1,0 +1,46 @@
+
+/*Vertical Center main-background*/
+.main-background{padding-left:5%; padding-right:5%;}
+.main-background::before {display:block; content:''; height:40%;}
+.main-background::after {display:block; content:''; height:40%;}
+.inner-background{height:20%;}
+.main-background{height:100%; width:90%;}
+
+/*Vertical Center navbar-head*/
+.navbar-wrapper::before{display:block; content:''; height:45px;}
+.navbar-wrapper::after{display:block; content:''; height:45px;}
+#navbar-head{height:30px;}
+.navbar-wrapper{height:100%;}
+
+.navbar-option{
+	display:inline-block; 
+	text-align:center; 
+	width:19%;
+	height:100%;
+	z-index:1;
+	background-color:rgba(0,0,0,0);
+	color:#322A22;
+	font-size:32px;
+}
+
+.navbar-option .text-shadow{
+	height:10px;
+	width:100%;
+	margin-top:-10px;
+	z-index:1;
+	background-image:radial-gradient(rgba(212,194,192,0.5) 30%, #EFEDEA 80%);
+}
+
+@font-face{
+	font-family:"ailerons";
+	src:url("assets/fonts/Ailerons-Typeface.ttf") format("truetype");
+}
+.font-ailerons{
+	font-family:"ailerons";
+}
+/*Main page dimensions*/
+html, body{
+	background-color:#EFEDEA;
+	height:100%;
+	width:100%;
+}
