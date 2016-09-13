@@ -7,10 +7,10 @@
 .main-background{height:100%; width:90%;}
 
 /*Vertical Center navbar-head*/
-.navbar-wrapper::before{display:block; content:''; height:45px;}
-.navbar-wrapper::after{display:block; content:''; height:45px;}
-#navbar-head{height:30px;}
-.navbar-wrapper{height:100%;}
+.main-header{height:100%;}
+.label-spacer::before{display:block; content:''; height:30%;}
+.label-spacer::after{display:block; content:''; height:30%;}
+.label-spacer{height:100%;}
 
 .navbar-option{
 	display:inline-block; 
