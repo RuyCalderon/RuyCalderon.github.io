@@ -1,0 +1,40 @@
+@font-face{
+	font-family:"ailerons";
+	src:url("assets/fonts/Ailerons-Typeface.ttf") format("truetype");
+}
+.font-ailerons{
+	font-family:"ailerons";
+}
+
+/*Vertical Center main-background*/
+.main-background{padding-left:5%; padding-right:5%;}
+.main-background::before {display:block; content:''; height:35%;}
+.main-background::after {display:block; content:''; height:40%;}
+.inner-background{height:20%;}
+.main-background{height:90%; width:90%;}
+
+/*Vertical Center navbar-head*/
+.main-header{height:95%;}
+.label-spacer{
+	padding-top:30%;
+	padding-bottom:30%;
+}
+
+.navbar-option{
+	position: absolute;
+	display:inline-block; 
+	text-align:center; 
+	width:19%;
+	height:20%;
+	z-index:1;
+	background-color:rgba(0,0,0,0);
+	color:#322A22;
+	font-size:32px;
+}
+
+/*Main page dimensions*/
+html, body{
+	background-color:#EFEDEA;
+	height:99%;
+	width:99%;
+}
