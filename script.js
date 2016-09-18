@@ -20,8 +20,8 @@ $(document).ready(function(event) {
 			var startFontSize = 32;
 			var endFontSize = 48;
 			if(!$(event.target).hasClass('deadzone')){
-				var deadZoneX = parseFloat($(this).find('.deadzone').css('width').replace('px',''));
-				var deadZoneY = parseFloat($(this).find('.deadzone').css('height').replace('px',''));
+				var deadZoneX = parseFloat($(event.target).css('width').replace('px',''));
+				var deadZoneY = parseFloat($(event.target).css('height').replace('px',''));
 
 				var xMin = deadZoneX / 2;
 				var yMin = deadZoneY / 2;
@@ -37,10 +37,6 @@ $(document).ready(function(event) {
 
 				var ratioToUse = 1-((ratioX < 0) ? ratioY : ratioX);
 
-				// console.log('X: ' + parseInt(xMin) + '<' + parseInt(x) + '<' + parseInt(xMax));
-				// console.log('Y: ' + parseInt(yMin) + '<' + parseInt(y) + '<' + parseInt(yMax));
-				// console.log('C/M: ' + ratioToUse);
-
 				var targetFontSize = ratioToUse *(endFontSize - startFontSize) + startFontSize;
 				targetFontSize = (targetFontSize < startFontSize) ? startFontSize : (targetFontSize > endFontSize) ? endFontSize : targetFontSize;
 				$(this).css('font-size', targetFontSize);
@@ -51,8 +47,19 @@ $(document).ready(function(event) {
 			else{
 				$(this).siblings().each(function(){
 					setDefaultSize(this, startFontSize);
-				});	
+					$(event.target).children('.submenu').children('submenu-popup').each(function(){
+						$(this).attr('hidden','true');
+					});
+				});
+				$(event.target).children('.submenu').removeAttr('hidden');
 			}
 		});
+
+		// $(this).find('.submenu').children('.submenu-option').each(function(){
+		// 	$(this).find('.deadzone').on('click',funcion(){
+		// 		$(this).siblings().find('.submenu-popup').attr('hidden','false');
+		// 	});
+		// });
 	});
+
 });
