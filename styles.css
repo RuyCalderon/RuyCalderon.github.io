@@ -6,18 +6,14 @@
 	font-family:"ailerons";
 }
 
-/*Vertical Center main-background*/
-.main-background{padding-left:5%; padding-right:5%;}
-.main-background::before {display:block; content:''; height:35%;}
-.main-background::after {display:block; content:''; height:40%;}
-.inner-background{height:20%;}
-.main-background{height:90%; width:90%;}
-
-/*Vertical Center navbar-head*/
 .main-header{height:95%;}
+/*Vertical Center navbar-head*/
+.label-spacer::before {display:block; content:''; height:45%;}
+.label-spacer::after {display:block; content:''; height:40%;}
 .label-spacer{
-	padding-top:30%;
-	padding-bottom:30%;
+	height:95%;
+	padding-top:10%;
+	padding-bottom:10%;
 }
 
 .navbar-option{
@@ -25,11 +21,15 @@
 	display:inline-block; 
 	text-align:center; 
 	width:19%;
-	height:20%;
+	height:95%;
 	z-index:1;
 	background-color:rgba(0,0,0,0);
 	color:#322A22;
 	font-size:32px;
+}
+
+.submenu-option{
+	font-size:24px;
 }
 
 /*Main page dimensions*/
