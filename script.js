@@ -1,6 +1,9 @@
 function setDefaultSize(selector, defaultSize){
 	$(selector).css('font-size', defaultSize);
 }
+function domStrToFloat(string){
+	return parseFloat(string.replace('px',''));
+}
 
 $(document).ready(function(event) {
 	console.log('test');
@@ -20,11 +23,16 @@ $(document).ready(function(event) {
 			var startFontSize = 32;
 			var endFontSize = 48;
 			if(!$(event.target).hasClass('deadzone')){
-				var deadZoneX = parseFloat($(event.target).css('width').replace('px',''));
-				var deadZoneY = parseFloat($(event.target).css('height').replace('px',''));
-
-				var xMin = deadZoneX / 2;
-				var yMin = deadZoneY / 2;
+				$(event.target).find('.submenu').attr('hidden','true');
+				
+				var deadzone = $(event.target).children('.deadzone');
+				var deadZoneWidth = domStrToFloat($(deadzone).css('width'));
+				var deadZoneHeight = domStrToFloat($(deadzone).css('height'));
+				var deadZoneLocX = $(deadzone).prop('offsetLeft');
+				var deadZoneLocY = $(deadzone).prop('offsetTop');
+			
+				var xMin = deadZoneLocX / 2;
+				var yMin = deadZoneLocY / 2;
 
 				var x = Math.abs(mouseLocationX - width/2);
 				var y = Math.abs(mouseLocationY - height/2);
