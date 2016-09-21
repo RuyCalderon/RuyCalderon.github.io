@@ -24,7 +24,7 @@ $(document).ready(function(event) {
 			var endFontSize = 48;
 
 			if(!$(event.target).hasClass('deadzone') && $(event.target).parents('.deadzone').length == 0){
-				$(event.target).find('.submenu').attr('hidden','true');
+				$(event.target).find('.submenu').css('display','none');
 
 				var deadzone = $(event.target).children('.deadzone');
 				var deadZoneWidth = domStrToFloat($(deadzone).css('width'));
@@ -56,19 +56,16 @@ $(document).ready(function(event) {
 			else{
 				$(this).siblings().each(function(){
 					setDefaultSize(this, startFontSize);
-					$(event.target).children('.submenu').children('submenu-popup').each(function(){
-						$(this).attr('hidden','true');
-					});
+					$(this).find('.submenu').css('display','none');
+					//have to add below line to work around bug in chrome in which the width of
+					//the span is miscalculated after hiding the submenu
+					$($(this).find('.deadzone')[0]).css('display','none').css('display','inline-block');
 				});
-				$(event.target).children('.submenu').removeAttr('hidden');
-			}
-		});
+				$(event.target).find('.submenu').css('display','block');
 
-		// $(this).find('.submenu').children('.submenu-option').each(function(){
-		// 	$(this).find('.deadzone').on('click',funcion(){
-		// 		$(this).siblings().find('.submenu-popup').attr('hidden','false');
-		// 	});
-		// });
+			}
+			
+		});
 	});
 
 });
