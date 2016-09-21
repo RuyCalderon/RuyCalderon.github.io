@@ -9,7 +9,7 @@
 .main-header{height:95%;}
 /*Vertical Center navbar-head*/
 .label-spacer::before {display:block; content:''; height:45%;}
-.label-spacer::after {display:block; content:''; height:40%;}
+/*.label-spacer::after {display:block; content:''; height:40%;}*/
 .label-spacer{
 	height:95%;
 	padding-top:10%;
@@ -17,20 +17,28 @@
 }
 
 .navbar-option{
-	position: absolute;
-	display:inline-block; 
+	position: absolute; 
 	text-align:center; 
 	width:19%;
 	height:95%;
-	z-index:1;
-	background-color:rgba(0,0,0,0);
 	color:#322A22;
 	font-size:32px;
+}
+.submenu{
+	margin-top:-10px;
 }
 
 .submenu-option{
 	font-size:24px;
+	color:#322A22;
+	width:100%;
+	padding-top:20px;
 }
+
+.submenu-option:hover{
+	font-size:28px;
+}
+
 
 /*Main page dimensions*/
 html, body{
