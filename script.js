@@ -11,7 +11,7 @@ $(document).ready(function(event) {
 	$('.main-header').find('.navbar-option').each(function(){
 		if($(this).prev().length){
 			var previousLeft = parseFloat($(this).prev().css('left').replace('px',''));
-			var divWidth = parseFloat($('.main-header').css('width').replace('px','')*0.19);
+			var divWidth = parseFloat($('.main-header').css('width').replace('px','')*0.2);
 			$(this).css('left', (previousLeft + divWidth).toString() + 'px');
 		}
 		$(this).mousemove(function(event){
@@ -22,9 +22,10 @@ $(document).ready(function(event) {
 
 			var startFontSize = 32;
 			var endFontSize = 48;
-			if(!$(event.target).hasClass('deadzone')){
+
+			if(!$(event.target).hasClass('deadzone') && $(event.target).parents('.deadzone').length == 0){
 				$(event.target).find('.submenu').attr('hidden','true');
-				
+
 				var deadzone = $(event.target).children('.deadzone');
 				var deadZoneWidth = domStrToFloat($(deadzone).css('width'));
 				var deadZoneHeight = domStrToFloat($(deadzone).css('height'));
