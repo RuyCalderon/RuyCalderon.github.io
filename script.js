@@ -21,7 +21,7 @@ $(document).ready(function(event) {
 			var mouseLocationY = event.originalEvent.offsetY;
 
 			var startFontSize = 32;
-			var endFontSize = 48;
+			var endFontSize = 64;
 
 			if(!$(event.target).hasClass('deadzone') && $(event.target).parents('.deadzone').length == 0){
 				$(event.target).find('.submenu').css('display','none');
@@ -32,20 +32,22 @@ $(document).ready(function(event) {
 				var deadZoneLocX = $(deadzone).prop('offsetLeft');
 				var deadZoneLocY = $(deadzone).prop('offsetTop');
 			
-				var xMin = deadZoneLocX / 2;
-				var yMin = deadZoneLocY / 2;
+				var xMin = deadZoneWidth / 4;
+				var yMin = deadZoneHeight / 2;
+
+				//using deadZoneHeight and deadZoneWidth gives proper behavior...
+				//but I like the way this looks more.
 
 				var x = Math.abs(mouseLocationX - width/2);
 				var y = Math.abs(mouseLocationY - height/2);
 
 				var xMax =  width / 2;
 				var yMax =  height / 2;
-
 				var ratioX = (x - xMin) / (xMax - xMin);
 				var ratioY = (y - yMin) / (yMax - yMin);
-
-				var ratioToUse = 1-((ratioX < 0) ? ratioY : ratioX);
-
+				
+				var ratioToUse = (1.0-ratioY)*(1.0-ratioX);
+				
 				var targetFontSize = ratioToUse *(endFontSize - startFontSize) + startFontSize;
 				targetFontSize = (targetFontSize < startFontSize) ? startFontSize : (targetFontSize > endFontSize) ? endFontSize : targetFontSize;
 				$(this).css('font-size', targetFontSize);
