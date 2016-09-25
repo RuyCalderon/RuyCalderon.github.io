@@ -1,0 +1,18 @@
+@font-face{
+	/*Fantastic font from Adilson Gonzalez of Brazil.
+	His behance profile: https://www.behance.net/agonz*/
+	font-family:"ailerons";
+	src:url("assets/fonts/Ailerons-Typeface.ttf") format("truetype");
+}
+
+.font-ailerons{
+	font-family:"ailerons";
+}
+
+.main-header{height:95%;}
+
+html, body{
+	background-color:#EFEDEA;
+	height:99%;
+	width:99%;
+}

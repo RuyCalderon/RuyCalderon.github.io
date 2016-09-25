@@ -6,8 +6,6 @@ function domStrToFloat(string){
 }
 
 $(document).ready(function(event) {
-	console.log('test');
-
 	$('.main-header').find('.navbar-option').each(function(){
 		if($(this).prev().length){
 			var previousLeft = parseFloat($(this).prev().css('left').replace('px',''));
@@ -21,7 +19,7 @@ $(document).ready(function(event) {
 			var mouseLocationY = event.originalEvent.offsetY;
 
 			var startFontSize = 32;
-			var endFontSize = 64;
+			var endFontSize = 54;
 
 			if(!$(event.target).hasClass('deadzone') && $(event.target).parents('.deadzone').length == 0){
 				$(event.target).find('.submenu').css('display','none');
@@ -32,7 +30,7 @@ $(document).ready(function(event) {
 				var deadZoneLocX = $(deadzone).prop('offsetLeft');
 				var deadZoneLocY = $(deadzone).prop('offsetTop');
 			
-				var xMin = deadZoneWidth / 4;
+				var xMin = deadZoneWidth / 2;
 				var yMin = deadZoneHeight / 2;
 
 				//using deadZoneHeight and deadZoneWidth gives proper behavior...
@@ -71,3 +69,19 @@ $(document).ready(function(event) {
 	});
 
 });
+
+function toResume(location){
+	window.location='menu/resume.html?'+location;
+}
+
+function toAlgoda(){
+	window.location='https://github.com/RuyCalderon/RC_AlgoDa';
+}
+
+function toLD34(){
+	window.location='https://github.com/RuyCalderon/LudumDare-34-entry'
+}
+
+function toAboutMe(){
+	window.location='menu/about.html'
+}
