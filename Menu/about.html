@@ -1,95 +1,140 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<script type='text/javascript' src='jquery.min.js'></script>
+		<script type='text/javascript' src='../jquery.min.js'></script>
 		<script src='about-script.js'></script>
 		<link rel='stylesheet' typ='text/css' href='about-styles.css'>
 	</head>
 	<body>
 		<div class='main-header'>
-			<span class='font-ailerons about-menu' id='at-work'>
+			<span class='font-ailerons about-menu start-state' id='at-work'>
 				<div class='font-ailerons deadzone'>
 					At Work
 				</div>
 				<div class='submenu'>
-					<div class='submenu-option'>
+					<div class='submenu-option start-state has-menu'>
 						<span class='deadzone font-ailerons'>
 							Qualities
 						</span>
 						<div class='submenu-popup'>
-							<div class='submenu-columns'>
-								<span class='submenu-option'>
+							<div class='nested-menu-columns'>
+								<span class='nested-menu-option'>
 									<span class='deadzone font-ailerons'>
-										Not an asshole
+										Personable
 									</span>
-									<div class='submenu-popup'>
-										While I'm sure you could find people who would say differently, most people find me to be a personable guy who rarely rubs people the wrong way.
+									<div class='nested-menu-option-popup'>
+										I value getting along with the people I work with very highly, and put effort into ensuring that is the case.
 									</div>
 								</span>
-								<span class='submenu-option'>
+								<span class='nested-menu-option'>
 									<span class='deadzone font-ailerons'>
 										Flexible
 									</span>
-									<div class='submenu-popup'>
-										Willing and able to adapt my coding style to the conventions of the codebase. Comfortable working with legacy and/or undocumented codebases.
+									<div class='nested-menu-option-popup'>
+										Willing and able to adapt my coding style to any conventions. Comfortable working with legacy and/or undocumented codebases.
 									</div>
 								</span>
-								<span class='submenu-option'>
+								<span class='nested-menu-option'>
 									<span class='deadzone font-ailerons'>
-										Meticulous
+										Exacting
 									</span>
-									<div class='submenu-popup'>
-										Will take the time I need to complete a task, once.
+									<div class='nested-menu-option-popup'>
+										Will work hard to ensure that I only have to solve a problem once.
 									</div>
 								</span>
 							</div>
 						</div>
 					</div>
-					<div class='submenu-option'>
-						<div class='submenu-option'>
-							<span class='deadzone font-ailerons'>
-								Proficiencies
-							</span>
-							<div class='submenu-popup'>
-								<div class='submenu-columns'>
-									<span class='submenu-option'>
-										<span class='deadzone font-ailerons'>
-											Languages
-										</span>
-										<div class='submenu-popup'>
-											C/C++
-											<br/>
-											Javascript: Jquery
-											<br/>
-											HTML5/CSS3
-											<br/>
-											SQL
-											<br/>
-											Coldfusion
-										</div>
+					<div class='submenu-option start-state has-menu'>
+						<span class='deadzone font-ailerons'>
+							Proficiencies
+						</span>
+						<div class='submenu-popup'>
+							<div class='nested-menu-columns'>
+								<span class='nested-menu-option'>
+									<span class='deadzone font-ailerons'>
+										Languages
 									</span>
-									<span class='submenu-option'>
-										<span class='deadzone font-ailerons'>
-											Source Control
-										</span>
-										<div class='submenu-popup'>
-											Git
-											<br/>
-											SVN
-										</div>
+									<div class='nested-menu-option-popup'>
+										C/C++
+										<br/>
+										Python
+										<br/>
+										Javascript Jquery
+										<br/>
+										HTML5/CSS3
+										<br/>
+										SQL
+										<br/>
+										Coldfusion
+									</div>
+								</span>
+								<span class='nested-menu-option'>
+									<span class='deadzone font-ailerons'>
+										Source Control
 									</span>
-								</div>
+									<div class='nested-menu-option-popup'>
+										Git
+										<br/>
+										SVN
+									</div>
+								</span>
 							</div>
 						</div>
 					</div>
 				</div>
 			</span>
-			<span class='font-ailerons about-menu' id='after-work'>
+			<span class='font-ailerons about-menu start-state' id='after-work'>
 				<div class='font-ailerons deadzone'>
 					After Work
 				</div>
 				<div class='submenu'>
-					
+					<div class='submenu-option'>
+						<span class='deadzone font-ailerons'>
+							Running
+						</span>
+						<div class='submenu-popup'>
+							This is my meditation, I usually run distance but <br/>have been trying to incorporate sprinting as much as<br/>possible in my routine.
+						</div>
+					</div>
+					<div class='submenu-option'>
+						<span class='deadzone font-ailerons'>
+							Programming Projects
+						</span>
+						<div class='submenu-popup'>
+							I make sure to push my boundaries and experiment with <br/>techniques/languages/paradigms as much as possible. <br/>Refer to the <embedded class='page-link' onclick=toProjects()>projects</embedded> section for some examples.
+						</div>
+					</div>
+					<div class='submenu-option'>
+						<span class='deadzone font-ailerons'>
+							Metalworking
+						</span>
+						<div class='submenu-popup'>
+							Being able to create something in the physical world <br/>is at times a welcome counterpoint to my work in the digital one. 
+						</div>
+					</div>
+					<div class='submenu-option'>
+						<span class='deadzone font-ailerons'>
+							Videogaming
+						</span>
+						<div class='submenu-popup'>
+							I've been playing games since I was I was four--<br/>going from Treasure Mountain to Logical Journey<br/> of the Zoombinis to Mariokart 64 to Limbo <br/>and everything in between.
+						</div>
+					</div>
+					<div class='submenu-option'>
+						<span class='deadzone font-ailerons'>
+							Reading
+						</span>
+						<div class='submenu-popup'>
+							I am currently reading the Rama series by Arthur C. Clarke. 
+							<br/>
+							<br/>
+							The Foundation series by Isaac Asimov alone contains 3 of my <br/>favorite books.(In my opinion, it should also be <br/>required reading in schools, but that's another matter.)
+							<br/>
+							<br/>
+							Other notables are "The Flamingos Smile" by Stephen Jay Gould,<br/> any biography by Walter Isaacson, and in the programming world,<br/>"Code: The Secret Language of Software and Hardware" by Charles Petzold.
+						</div>
+					</div>
 				</div>
 			</span>
 		</div>

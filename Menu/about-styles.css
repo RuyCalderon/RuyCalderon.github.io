@@ -17,18 +17,83 @@
 
 .about-menu{
 	position:absolute;
-	font-size:48px;
 	text-align:center;
 }
 
-#at-work{
+#at-work.start-state{
 	top:45%;
 	left:20%;
+	font-size:48px;
 }
-#after-work{
+#at-work.end-state{
+	top:45%;
+	left:10%;
+	font-size:32px;
+}
+#at-work.end-state:hover{
+	top:20%;
+	left:20%;
+	right:20%;
+	bottom:20%;
+	font-size:54px;
+}
+#after-work.start-state{
 	top:45%;
 	right: 20%;
+	font-size:48px;
 }
+#after-work.end-state{
+	top:45% ;
+	right:10%;
+	font-size:32px;
+}
+#after-work.end-state:hover{
+	top:20%;
+	left:20%;
+	right:20%;
+	bottom:20%;
+	font-size:72px;
+}
+
+
+/*copy/paste from base styles*/
+.submenu{
+	margin-top:-10px;
+	display:none;
+}
+.submenu-popup{
+	display:none;
+}
+
+.submenu-option{
+	font-size:24px;
+	color:#322A22;
+	width:100%;
+	padding-top:20px;
+}
+
+.submenu-option:hover{
+	font-size:28px;
+}
+.submenu-option.has-menu:hover+.submenu-option{
+	margin-top:100px;
+}
+
+.submenu-option:hover .submenu-popup{
+	display:block;
+	font-size:18px;
+	margin-top:20px;
+}
+/*end copy/paste from base*/
+
+.about-menu:hover>.submenu{ display:block;}
+.about-menu:hover>.submenu>.submenu-option:hover>.submenu-popup{ display:block; font-size:14px;}
+
+.nested-menu-option{ font-size:18px; margin-right:20px; margin-left:20px;}
+.nested-menu-option:hover{ font-size: 24px; }
+.nested-menu-option>.nested-menu-option-popup{ display:none; font-size:14px}
+.nested-menu-option:hover>.nested-menu-option-popup{ position:absolute; width:50%; left:25%; text-align:center; display:block; font-size:18px; margin-top:20px;}
+
 
 html, body{
 	background-color:#EFEDEA;
