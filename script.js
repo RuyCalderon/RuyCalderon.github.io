@@ -71,7 +71,7 @@ $(document).ready(function(event) {
 });
 
 function toResume(location){
-	window.location='menu/resume.html?'+location;
+	window.location='Menu/resume.html?'+location;
 }
 
 function toAlgoda(){
@@ -83,5 +83,5 @@ function toLD34(){
 }
 
 function toAboutMe(){
-	window.location='menu/about.html'
+	window.location='Menu/about.html'
 }
