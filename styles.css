@@ -1,15 +1,18 @@
 @font-face{
+	/*Fantastic font from Adilson Gonzalez of Brazil.
+	His behance profile: https://www.behance.net/agonz*/
 	font-family:"ailerons";
 	src:url("assets/fonts/Ailerons-Typeface.ttf") format("truetype");
 }
+
 .font-ailerons{
 	font-family:"ailerons";
 }
 
 .main-header{height:95%;}
-/*Vertical Center navbar-head*/
+
 .label-spacer::before {display:block; content:''; height:45%;}
-/*.label-spacer::after {display:block; content:''; height:40%;}*/
+
 .label-spacer{
 	height:95%;
 	padding-top:10%;
@@ -17,6 +20,7 @@
 }
 
 .navbar-option{
+	cursor:default;
 	position: absolute; 
 	text-align: center; 
 	width:19%;
@@ -44,10 +48,36 @@
 	font-size:28px;
 }
 
+.submenu-option:hover .submenu-popup{
+	display:block;
+	font-size:18px;
+	margin-top:20px;
+}
+
 .main-content{
 	display:none;
 }
 
+
+
+.page-link:hover{
+	cursor:pointer;
+}
+
+
+
+.external-link-warning{
+	display:none;
+}
+.external-link:hover{
+	cursor:pointer;
+}
+.external-link:hover+ .external-link-warning{
+	display:block;
+	font-size:18px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
 
 /*Main page dimensions*/
 html, body{

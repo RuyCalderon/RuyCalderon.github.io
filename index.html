@@ -13,29 +13,12 @@
 						About
 						<div class='submenu'>
 							<div class='submenu-option'>
-								<span class='deadzone font-ailerons'>
+								<span class='deadzone font-ailerons page-link' onclick=toAboutMe()>
 									Me
 								</span>
 								<div class='submenu-popup'>
-									Oh I'm a little teapot short and stout
-									here is my handle here is my spout. (This is not true, I'm not actually a teapot).
+									Background, motivation, etc.
 								</div>
-							</div>
-							<div class='submenu-option'>
-								<span class='deadzone font-ailerons'>
-									Programming
-								</span>
-								<div class='submenu-popup'>
-									Type things into computer, computer does something, I likely have to think harder about what I want it to do. Then type more stuff into the computer.
-								</div>
-							</div>
-							<div class='submenu-option'>
-								<span class='deadzone font-ailerons'>
-									Civil Engineering
-								</span>
-								<div class='submenu-popup'>
-									Certainly not programming, and only 91 credit-hours in, but I'd never know I could do math without it, so there's that.
-									</div>
 							</div>
 						</div>
 					</span>
@@ -47,9 +30,12 @@
 						Projects
 						<div class='submenu'>
 							<div class='submenu-option'>
-								<span class='deadzone font-ailerons'>
+								<span class='deadzone font-ailerons external-link' onclick=toAlgoda()>
 									AlgoDa
 								</span>
+								<div class='external-link-warning'>
+									External Link
+								</div>
 								<div class='submenu-popup'>
 									Library of algorithms and datastructures
 									written in c++. Practice for now, for use
@@ -57,15 +43,14 @@
 								</div>
 							</div>
 							<div class='submenu-option'>
-								<span class='deadzone font-ailerons'>
+								<span class='deadzone font-ailerons external-link' onclick=toLD34()>
 									LudumDare 34 Entry
 								</span>
+								<div class='external-link-warning'>
+									External Link
+								</div>
 								<div class='submenu-popup'>
-									First attempt at creating a game starting
-									with low-level windows API calls and very
-									simple software rendering.
-
-									Theme(s): Two-Button Control, Growing
+									Written with low-level windows API calls and simple software rendering.
 								</div>
 							</div>
 						</div>
@@ -93,6 +78,14 @@
 									Ruy.Calderon@gmail.com
 								</div>
 							</div>
+							<div class='submenu-option'>
+								<span class='deadzone font-ailerons'>
+									Location
+								</span>
+								<div class='submenu-popup'>
+									Chicago, Il
+								</div>
+							</div>
 						</div>
 					</span>
 				</div>
@@ -104,7 +97,7 @@
 						<div class='submenu'>
 							<div class='submenu-option'>
 								<span class='deadzone font-ailerons'>
-									
+									This website?
 								</span>
 								<div class='submenu-popup'>
 									Really not much to put here...
@@ -120,23 +113,23 @@
 						Resume
 						<div class='submenu'>
 							<div class='submenu-option deadzone'>
-								<span class='deadzone font-ailerons'>
+								<span class='deadzone font-ailerons page-link' onClick=toResume("employers")>
 									For Employers
 								</span>
 								<div class='submenu-popup'>
-									For the love of God don't take any of this seriously(yet)...
+									For the love of God don't take any of this too seriously...
 								</div>
 							</div>
 							<div class='submenu-option'>
-								<span class='deadzone font-ailerons'>
+								<span class='deadzone font-ailerons page-link' onclick=toResume("clients")>
 									For Clients
 								</span>
 								<div class='submenu-popup'>
-									How... how did you end up here? Google search gone bad? Trying to find your friend "Roy" and had a typo? It happens, I won't tell anyone.
+									Wait... I have clients?
 								</div>
 							</div>
 							<div class='submenu-option'>
-								<span class='deadzone font-ailerons'>
+								<span class='deadzone font-ailerons page-link' onclick=toResume("everyone")>
 									For Everyone
 								</span>
 								<div class='submenu-popup'>
