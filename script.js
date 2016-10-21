@@ -10,6 +10,14 @@ $(document).ready(function(event) {
 		if($(this).prev().length){
 			var previousLeft = parseFloat($(this).prev().css('left').replace('px',''));
 			var divWidth = parseFloat($('.main-header').css('width').replace('px','')*0.2);
+			
+			//for ie
+			if(previousLeft.toString() == 'NaN'){
+				previousLeft = parseFloat($(this).prev().prop('clientLeft'));
+			}
+			if(divWidth.toString() == 'NaN'){
+				var divWidth = parseFloat($('.main-header').css('width').replace('px','')*0.2);
+			}
 			$(this).css('left', (previousLeft + divWidth).toString() + 'px');
 		}
 		$(this).mousemove(function(event){

@@ -1,8 +1,11 @@
+/*Fantastic font from Adilson Gonzalez of Brazil.
+His behance profile: https://www.behance.net/agonz*/
 @font-face{
-	/*Fantastic font from Adilson Gonzalez of Brazil.
-	His behance profile: https://www.behance.net/agonz*/
 	font-family:"ailerons";
-	src:url("../assets/fonts/Ailerons-Typeface.ttf") format("truetype");
+	src:url('../assets/fonts/Ailerons-Typeface?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/Ailerons-Typeface.ttf') format("truetype"),
+		url('../assets/fonts/Ailerons-Typeface.woff') format("woff"),
+		url('../assets/fonts/Ailerons-Typeface.otf') format("opentype");
 }
 
 .font-ailerons{
@@ -49,7 +52,7 @@
 	font-size:48px;
 }
 .partition:hover > #at-work{
-	top:20%;
+	top:0%;
 	left:10%;
 	right:10%;
 	bottom:20%;
@@ -62,7 +65,7 @@
 	font-size:48px;
 }
 .partition:hover > #after-work{
-	top:20%;
+	top:0%;
 	left:10%;
 	right:10%;
 	bottom:20%;
