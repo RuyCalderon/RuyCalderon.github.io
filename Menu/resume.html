@@ -8,202 +8,129 @@
 		<div class='main-header font-ailerons'>
 			<div class='resume resume-left no-select' id='resumeOptions'>
 				<div class='page-header resume-header'>
-					<span class='button-back'>Return To Index</span>
+					<span class='button-left'>Return To Index</span>
 					<span class='page-info'></span>
 				</div>
 				<div class='options resume-body'>
-					<div class='section-label-large'>Contact Info</div>
-					<div class='section-divider-vertical-large'></div>
-					<div class='options-title'>
-						<div class='set-contact'>
-							<div class='change-settings'>
-								<span class='button-left one-of-two'>Add</span>
-								<span class='button-right one-of-two'>Remove</span>
-							</div>
-							<div class='setting-menu-add'>
-								<div class='section-divider-vertical-small'></div>
-								<div class='section-label-small'>Add Contact Info</div>
-								<div class='setting-options'>
-									<div class='setting-option-stub' hidden></div>
-									<div class='setting-option'>Phone</div>
-									<div class='setting-option'>Email</div>
-									<div class='setting-option'>Address</div>
-								</div>
-								<div class='section-divider-vertical-small'></div>
-							</div>
-							<div class='setting-menu-remove'>
-								<div class='section-label-small'>Remove Contact Info</div>
-								<div class='setting-selected'>
-									<div class='setting-option-stub' hidden></div>
-									<div class='setting-option'>Phone</div>
-									<div class='setting-option'>Email</div>
-								</div>
-							</div>
-							<div class='section-divider-vertical-small'></div>
-							<div class='setting-display'>
-								<span class='option-spacer-horizontal'></span>
-								<span class='setting-option'>Phone</span>
-								<span class='option-spacer-horizontal'></span>
-								<span class='setting-option'>Email</span>
-								<span class='option-spacer-horizontal'></span>
-							</div>
-						</div>
-						<div class='section-spacer-end'></div>
-					</div>
 					<div class='options-body'>
 						<div class='set-body'>
 							<div class='section-label-large'>Set Resume Parameters</div>
 							<div class='section-divider-vertical-large'></div>
 							<div class='change-settings'>
 								<div class='row'>
+									<span class='button-interior center-aligned'>Add Contact Info</span>
+									<div class='popup-menu'>
+										<div class='popup-option'>Email</div>
+										<div class='popup-option'>Phone</div>
+										<div class='popup-option'>Address</div>
+									</div>
+								</div>
+								<div class='row'>
 									<span class='button-left left-aligned'>Add Language</span>								
+									<div class='popup-menu'>
+										<div class='popup-option'>C</div>
+										<div class='popup-option'>C++</div>
+										<div class='popup-option'>Python</div>
+										<div class='popup-option'>Javascript</div>
+										<div class='popup-option'>HTML/CSS</div>
+										<div class='popup-option'>SQL</div>
+										<div class='popup-option'>Coldfusion</div>
+									</div>
 									<span class='button-right right-aligned'>Add Framework</span>
+									<div class='popup-menu'>
+										<div class='popup-option'>Jquery</div>
+										<div class='popup-option'>Windows GDI</div>
+									</div>
 								</div>
 								<div class='row'>					
 									<span class='button-left left-aligned'>Add Industry</span>								
+									<div class='popup-menu'>
+										<div class='popup-option'>E-Commerce</div>
+										<div class='popup-option'>Medical</div>
+										<div class='popup-option'>Research</div>
+									</div>
 									<span class='button-right right-aligned'>Add Role</span>
+									<div class='popup-menu'>
+										<div class='popup-option'>Junior Developer</div>
+										<div class='popup-option'>IT/Developer</div>
+										<div class='popup-option'>Computer Programmer</div>
+										<div class='popup-option'>Contractor</div>										
+									</div>
 								</div>
-								<div class='row-large'>
+								<div class='row-XL'>
 									<span class='range-select-left left-aligned'>
-										<div>Date Range</div>
-										<div>
-											<span>
-												<select type='menu' id='timeline start'>Timeline Start</select>
-											</span>
-											<span>
-												<select type='menu' id='timeline end'>Timeline End</select>
-											</span>
+										<div class='range-label'>Dates</div>
+										<div class='row-small'>
+											<span class='left-aligned'>Start</span>
+											<span class='right-aligned'>End</span>
 										</div>
 									</span>
 
 									<span class='range-select-right right-aligned'>
-										<div>Education Range</div>
-										<div>
-											<span class='left-aligned'>
-												<select type='menu' id='timeline start'>Minimum Desired</select>
-											</span>
-											<span class='right-aligned'>
-												<select type='menu' id='timeline end'>Maximum Desired</select>
-											</span>
+										<div class='range-label'>Education</div>
+										<div class='row-small'>
+											<span class='left-aligned'>Start</span>
+											<span class='right-aligned'>End</span>
 										</div>
 									</span>
 								</div>
-								<div class='section-divider-vertical-small'></div>
-								<div class='section-label-small'>Languages</div>
+								<div class='section-spacer-end-small'></div>
+								<div class='section-label-small underlined'>Contact Info</div>
+								<div class='subsection' id='contact'>
+									<span class='circle-delimiter'></span>
+									<span class='setting-option'>Phone</span>
+									<span class='setting-option'>Email</span>
+									<span class='circle-delimiter'></span>
+								</div>
+								<div class='section-label-small underlined'>Languages</div>
 								<div class='subsection' id='languages'>
-									<span class='option-spacer-horizontal'></span>
+									<span class='circle-delimiter'></span>
 									<span class='setting-option'>C++</span>
-									<span class='option-spacer-horizontal'></span>
+									<span class='circle-delimiter'></span>
 								</div>
-								<div class='section-label-small'>Frameworks</div>
+								<div class='section-label-small underlined'>Frameworks</div>
 								<div class='subsection' id='languages'>
-									<span class='option-spacer-horizontal'></span>
+									<span class='circle-delimiter'></span>
 									<span class='setting-option'>Boost</span>
-									<span class='option-spacer-horizontal'></span>
+									<span class='circle-delimiter'></span>
 								</div>
-								<div class='section-label-small'>Industries</div>
+								<div class='section-label-small underlined'>Industries</div>
 								<div class='subsection' id='languages'>
-									<span class='option-spacer-horizontal'></span>
+									<span class='circle-delimiter'></span>
 									<span class='setting-option'>E-Commerce</span>
-									<span class='option-spacer-horizontal'></span>
 									<span class='setting-option'>Medical</span>
-									<span class='option-spacer-horizontal'></span>
+									<span class='circle-delimiter'></span>
 								</div>
-								<div class='section-label-small'>Roles</div>
+								<div class='section-label-small underlined'>Roles</div>
 								<div class='subsection' id='languages'>
-									<span class='option-spacer-horizontal'></span>
+									<span class='circle-delimiter'></span>
 									<span class='setting-option'>Jr. Developer</span>
-									<span class='option-spacer-horizontal'></span>
 									<span class='setting-option'>Computer Programmer</span>
-									<span class='option-spacer-horizontal'></span>
+									<span class='circle-delimiter'></span>
 								</div>
-								<div class='section-label-small'>Dates Between</div>
+								<div class='section-label-small underlined'>Dates Between</div>
 								<div class='subsection' id='languages'>
-									<span class='option-spacer-horizontal'></span>
+									<span class='circle-delimiter'></span>
 									<span class='setting-option'>April 20,1989-June 7, 2946</span>
-									<span class='option-spacer-horizontal'></span>
+									<span class='circle-delimiter'></span>
 								</div>
-								<div class='section-label-small'>Education Between</div>
+								<div class='section-label-small underlined'>Education Between</div>
 								<div class='subsection' id='languages'>
-									<span class='option-spacer-horizontal'></span>
+									<span class='circle-delimiter'></span>
 									<span class='setting-option'>Grade School-Bachelors Degree</span>
-									<span class='option-spacer-horizontal'></span>
+									<span class='circle-delimiter'></span>
 								</div>
 							</div>
-							<div class='current-settings'>
-								<div class='setting body-setting'>
-									<div>
-										Selected Body Settings
-									</div>
-									<div class='setting-list'>
-										<div class='setting setting-stub' hidden></div>
-										<div class='sub-setting-container'>
-											<div class='sub-setting-label'>Language(s)</div>
-											<div class='sub-setting-list'>
-												<div class='setting sub-setting-stub' hidden></div>
-												<div class='sub-setting'>C++</div>
-											</div>
-										</div>
-										<div class='sub-setting-container'>
-											<div class='sub-setting-label'>Framework(s)</div>
-											<div class='sub-setting-list'>
-												<div class='setting sub-setting-stub' hidden></div>
-												<div class='sub-setting'>Boost</div>
-											</div>
-										</div>
-										<div class='sub-setting-container'>
-											<div class='sub-setting-label'>Industry(s)</div>
-											<div class='sub-setting-list'>
-												<div class='setting sub-setting-stub' hidden></div>
-												<div class='sub-setting'>ECommerce</div>
-												<div class='sub-setting'>Medical</div>
-											</div>
-										</div>
-										<div class='sub-setting-container'>
-											<div class='sub-setting-label'>Role(s)</div>
-											<div class='sub-setting-list'>
-												<div class='setting sub-setting-stub' hidden></div>
-												<div class='sub-setting'>Junior Developer</div>
-												<div class='sub-setting'>Software Developer</div>
-											</div>
-										</div>
-										<div class='sub-setting-container'>
-											<div class='sub-setting-label'>Timeline</div>
-											<div class='sub-setting-list'>
-												<div class='setting sub-setting-stub' hidden></div>
-												<div class='sub-setting'>
-													<div class='range'>
-														<div class='range' start="April 20,1989" end="June 7, 2946">
-															<div class='range-label'>Search Dates Between:</div>
-															<div class='range-viewer'>
-																<span class='range-viewer-stub' hidden></span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class='sub-setting-container'>
-											<div class='sub-setting-label'>Education</div>
-											<div class='sub-setting-list'>
-												<div class='setting sub-setting-stub' hidden></div>
-												<div class='sub-setting'>
-													<div class='range'>
-														<div class='range' start="Primary School" end="Bachelor's">
-															<div class='range-label'>Current education range</div>
-															<div class='range-viewer'>
-																<span class='range-viewer-stub' hidden></span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+							<div class='section-spacer-end'></div>
 						</div>
-						<div class='section-spacer-end'></div>
+					</div>
+					<div class='options-controls bottom'>
+						<div class='section-label-large'>Controls</div>
+						<div class='section-divider-vertical-large'></div>
+						<div class='row'>
+							<span class='button-left left-aligned'>Update Resume</span>
+							<span class='button-right right-aligned'>Resume To Raw Text</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -266,10 +193,6 @@
 				</div>
 			</div>
 			<div class='resume resume-footer' id='resume-footer'>
-				<span class='export'>
-					<button class='resume-option'>Update</button>
-					<button class='resume-option'>To Raw Text</button>
-				</span>
 			</div>
 		</div>
 	</body>

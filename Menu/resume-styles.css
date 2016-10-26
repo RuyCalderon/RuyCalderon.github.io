@@ -1,14 +1,23 @@
 
 .resume{	text-align:center;	font-size:18px;	height:100%}
+.change-settings{
+	font-size:20px;
+	margin-top:10px;
+}
+.setting-option{
+	font-size:18px;
+	margin-right:5px;
+	margin-left:5px;
+}
 
-.resume-right{	position:absolute;	right:2.5%;	width:22.5%;}
-.resume-left{	position:absolute;	left:2.5%;	width:22.5%;}
-.resume-center{	position:absolute;	left:27.5%;	right:27.5%;}
 
-.resume-footer{	position:absolute;	bottom:2.5%;height:5%;}
-.resume-header{	position:absolute;	top:2.5%;	height:5%;}
-.resume-body{	position:absolute;	top:10%;	bottom:10%;}
+.resume-right{	position:absolute;	right:2.5%;	width:17.5%;}
+.resume-left{	position:absolute;	left:2.5%;	width:27.5%;}
+.resume-center{	position:absolute;	left:32.5%;	right:22.5%;}
+.resume-header{	position:absolute;	top:2.5%;		height:7.5%;}
+.resume-body{	position:absolute;	top:10%;	bottom:2.5%;}
 
+.bottom{	position:inherit; bottom:5%; width:100%;}
 /*From Stack Overflow Question #826782*/
 .no-select {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -24,48 +33,46 @@
 	padding-left:10%;
 }
 .button-left{
-	font-size:18px;
 	border-width:0px 1px 1px 0px;
 	border-color:#ADA7AD;
 	border-style:solid;
 }
 .button-left:hover{
 	cursor:pointer;
-	font-size:20px;
+	font-size:22px;
 }
 .button-left:active{
 	cursor:pointer;
-	font-size:17px;
+	font-size:19px;
 	border-width:1px 0px 0px 1px;
 }
 .button-right{
-	font-size:18px;
 	border-width:0px 0px 1px 1px;
 	border-color:#ADA7AD;
 	border-style:solid;
 }
 .button-right:hover{
 	cursor:pointer;
-	font-size:20px;
+	font-size:22px;
 }
 .button-right:active{
 	cursor:pointer;
-	font-size:17px;
+	font-size:19px;
 	border-width:1px 1px 0px 0px;
 }
 .button-interior{
-	border-width:0px 1px 1px 1px];
+	border-width:0px 1px 1px 1px;
 	border-color:#ADA7AD;
 	border-style:solid;
 }
 .button-interior:hover{
 	cursor:pointer;
-	font-size:20px;
+	font-size:22px;
 }
 .button-interior:active{
 	cursor:pointer;
-	font-size:16px;
-	border-top:1px;
+	font-size:19px;
+	border-width:1px 0px 0px 0px;
 }
 .row-small{
 	width:100%;
@@ -75,8 +82,13 @@
 	width:100%;
 	height:40px;
 }
+.row-XL{
+	width:100%;
+	height:60px;
+}
 .row{
-	height:22px;
+	position:relative;
+	height:24px;
 	width:100%;
 	padding-top:2px;
 	padding-bottom:2px;
@@ -91,15 +103,38 @@
 	float:right;
 	width:45%;
 }
+.center-aligned{
+	display:inline-block;
+	width:80%;
+	left:10%;
+	right:10%;
+}
 .range-select-left{
 	display:inline-block;
-	width:40%;
+	width:50%;
 }
 .range-select-right{
 	display:inline-block;
-	width:40%;
+	width:50%;
 }
-
+.range-select-left:hover>.range-label{
+	font-size:22px;
+}
+.range-select-left:hover .right-aligned:hover{
+	font-size:22px;
+}
+.range-select-left:hover .left-aligned:hover{
+	font-size:22px;
+}
+.range-select-right:hover>.range-label{
+	font-size:22px;	
+}
+.range-select-right:hover .right-aligned:hover{
+	font-size:22px;
+}
+.range-select-right:hover .left-aligned:hover{
+	font-size:22px;
+}
 .section-divider-vertical-small{
 	height:1px;
 	position:relative;
@@ -120,10 +155,13 @@
 	background-color:#ADA7AD;
 	text-align: center;
 }
+.section-spacer-end-small{
+	margin-bottom:20px;
+}
 .section-spacer-end{
 	margin-bottom:30px;
 }
-.option-spacer-horizontal{
+.circle-delimiter{
 	display:inline-block;
 	min-width:6px;
 	min-height:6px;
@@ -131,8 +169,8 @@
 	border-radius:3px;
 	border-color:black;
 	background-color:black;
-	margin-left:20px;
-	margin-right:20px;
+	margin-left:5px;
+	margin-right:5px;
 	margin-bottom:3px;}
 
 
@@ -147,18 +185,51 @@
 	font-weight:200;
 }
 
+.underlined{
+	border-style:solid;
+	border-width:0px 0px 1px 0px;
+}
 
-.change-settings{
-	margin-top:10px;
-}
-.current-settings{
+.popup-menu{
 	display:none;
+	position:absolute;
+	font-size:16px;
+	top:0%;
+	padding-top:26px;
+	border-style:solid;
 }
-.setting-menu-add{
-	display:none;
+.button-right:active + .popup-menu{
+	display:block;
+	background-color:#EFEDEA;
+	width:45%;
+	right:0%;
+	z-index:2;
+	border-width:0px 1px 1px 1px;
 }
-.setting-menu-remove{
-	display:none;
+.button-left:active + .popup-menu{
+	display:block;
+	background-color:#EFEDEA;
+	width:45%;
+	left:0%;
+	z-index:4;
+	border-width:0px 1px 1px 1px;
+}
+.button-interior:active + .popup-menu{
+	display:block;
+	background-color:#EFEDEA;
+	width:80%;
+	left:10%;
+	right:10%;
+	z-index:2;
+	border-width:0px 1px 1px 1px;
+}
+.popup-menu:hover{
+	display:block;
+	background-color:#EFEDEA;
+	z-index:2;
+}
+.popup-menu:hover > .popup-option:hover{
+	font-size:18px;
 }
 
 .main-header{height:95%;}
