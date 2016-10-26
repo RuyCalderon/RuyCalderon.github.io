@@ -6,11 +6,14 @@ function domStrToFloat(string){
 }
 
 $(document).ready(function(event) {
+
 	$('.main-header').find('.navbar-option').each(function(){
+
 		if($(this).prev().length){
 			var previousLeft = parseFloat($(this).prev().css('left').replace('px',''));
 			var divWidth = parseFloat($('.main-header').css('width').replace('px','')*0.2);
-			
+
+
 			//for ie
 			if(previousLeft.toString() == 'NaN'){
 				previousLeft = parseFloat($(this).prev().prop('clientLeft'));

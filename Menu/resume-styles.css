@@ -1,3 +1,173 @@
+
+.resume{	text-align:center;	font-size:18px;	height:100%}
+
+.resume-right{	position:absolute;	right:2.5%;	width:22.5%;}
+.resume-left{	position:absolute;	left:2.5%;	width:22.5%;}
+.resume-center{	position:absolute;	left:27.5%;	right:27.5%;}
+
+.resume-footer{	position:absolute;	bottom:2.5%;height:5%;}
+.resume-header{	position:absolute;	top:2.5%;	height:5%;}
+.resume-body{	position:absolute;	top:10%;	bottom:10%;}
+
+/*From Stack Overflow Question #826782*/
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+.one-of-two{
+	padding-right:10%;
+	padding-left:10%;
+}
+.button-left{
+	font-size:18px;
+	border-width:0px 1px 1px 0px;
+	border-color:#ADA7AD;
+	border-style:solid;
+}
+.button-left:hover{
+	cursor:pointer;
+	font-size:20px;
+}
+.button-left:active{
+	cursor:pointer;
+	font-size:17px;
+	border-width:1px 0px 0px 1px;
+}
+.button-right{
+	font-size:18px;
+	border-width:0px 0px 1px 1px;
+	border-color:#ADA7AD;
+	border-style:solid;
+}
+.button-right:hover{
+	cursor:pointer;
+	font-size:20px;
+}
+.button-right:active{
+	cursor:pointer;
+	font-size:17px;
+	border-width:1px 1px 0px 0px;
+}
+.button-interior{
+	border-width:0px 1px 1px 1px];
+	border-color:#ADA7AD;
+	border-style:solid;
+}
+.button-interior:hover{
+	cursor:pointer;
+	font-size:20px;
+}
+.button-interior:active{
+	cursor:pointer;
+	font-size:16px;
+	border-top:1px;
+}
+.row-small{
+	width:100%;
+	height:18px;
+}
+.row-large{
+	width:100%;
+	height:40px;
+}
+.row{
+	height:22px;
+	width:100%;
+	padding-top:2px;
+	padding-bottom:2px;
+	margin-top:1px;
+	margin-bottom:1px;
+}
+.left-aligned{
+	float:left;
+	width:45%;
+}
+.right-aligned{
+	float:right;
+	width:45%;
+}
+.range-select-left{
+	display:inline-block;
+	width:40%;
+}
+.range-select-right{
+	display:inline-block;
+	width:40%;
+}
+
+.section-divider-vertical-small{
+	height:1px;
+	position:relative;
+	left:10%;
+	width:80%;
+	margin-top:20px;
+	margin-bottom:20px;
+	background-color:#ADA7AD;
+	text-align: center;
+}
+.section-divider-vertical-large{
+	height:3px;
+	position:relative;
+	left:0%;
+	width:100%;
+	margin-top:10px;
+	margin-bottom:15px;
+	background-color:#ADA7AD;
+	text-align: center;
+}
+.section-spacer-end{
+	margin-bottom:30px;
+}
+.option-spacer-horizontal{
+	display:inline-block;
+	min-width:6px;
+	min-height:6px;
+	border-width:3px;
+	border-radius:3px;
+	border-color:black;
+	background-color:black;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:3px;}
+
+
+.section-label-small{
+	text-align:center;
+	font-size:24px;
+	font-weight:200;
+}
+.section-label-large{
+	text-align:center;
+	font-size:32px;
+	font-weight:200;
+}
+
+
+.change-settings{
+	margin-top:10px;
+}
+.current-settings{
+	display:none;
+}
+.setting-menu-add{
+	display:none;
+}
+.setting-menu-remove{
+	display:none;
+}
+
+.main-header{height:95%;}
+html, body{
+	background-color:#EFEDEA;
+	height:99%;
+	width:99%;
+}
+
 /*Fantastic font from Adilson Gonzalez of Brazil.
 His behance profile: https://www.behance.net/agonz*/
 @font-face{
@@ -7,15 +177,6 @@ His behance profile: https://www.behance.net/agonz*/
 		url('../assets/fonts/Ailerons-Typeface.woff') format("woff"),
 		url('../assets/fonts/Ailerons-Typeface.otf') format("opentype");
 }
-
 .font-ailerons{
 	font-family:"ailerons";
-}
-
-.main-header{height:95%;}
-
-html, body{
-	background-color:#EFEDEA;
-	height:99%;
-	width:99%;
 }

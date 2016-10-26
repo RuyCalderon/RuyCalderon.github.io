@@ -133,6 +133,20 @@ His behance profile: https://www.behance.net/agonz*/
 	margin-top:20px;
 }
 
+.button-back{
+	position:absolute;
+	width:20%;
+	height:10%;
+	left:40%;
+	bottom:4%;
+	text-align:center;
+	font-size:150%;
+}
+
+.button-back:hover{
+	font-size:200%;
+	cursor:pointer;
+}
 
 html, body{
 	background-color:#EFEDEA;
