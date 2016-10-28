@@ -4,18 +4,28 @@
 	font-size:20px;
 	margin-top:10px;
 }
+.options-controls > .row{
+	font-size:24px;
+}
 .setting-option{
 	font-size:18px;
 	margin-right:5px;
 	margin-left:5px;
 }
+.text-size-small{
+	font-size:75%;
+}
 
+
+.cursor-pointer{
+	cursor:pointer;
+}
 
 .resume-right{	position:absolute;	right:2.5%;	width:17.5%;}
 .resume-left{	position:absolute;	left:2.5%;	width:27.5%;}
 .resume-center{	position:absolute;	left:32.5%;	right:22.5%;}
-.resume-header{	position:absolute;	top:2.5%;		height:7.5%;}
-.resume-body{	position:absolute;	top:10%;	bottom:2.5%;}
+.resume-header{	position:absolute;	top:0%;	height:7.5%; width:100%;}
+.resume-body{	position:absolute;	top:10%;	bottom:2.5%; width:100%;}
 
 .bottom{	position:inherit; bottom:5%; width:100%;}
 /*From Stack Overflow Question #826782*/
@@ -75,20 +85,23 @@
 	border-width:1px 0px 0px 0px;
 }
 .row-small{
+	position:relative;
 	width:100%;
 	height:18px;
 }
 .row-large{
+	position:relative;
 	width:100%;
 	height:40px;
 }
 .row-XL{
+	position:relative;
 	width:100%;
 	height:60px;
 }
 .row{
 	position:relative;
-	height:24px;
+	height:25px;
 	width:100%;
 	padding-top:2px;
 	padding-bottom:2px;
@@ -109,6 +122,25 @@
 	left:10%;
 	right:10%;
 }
+.button-tall{
+	height:40px;
+	vertical-align: center;
+}
+
+
+.options-controls .button-left:hover{
+	font-size:26px;
+}
+.options-controls .button-right:hover{
+	font-size:26px;
+}
+.options-controls .button-left:active{
+	font-size:22px;
+}
+.options-controls .button-right:active{
+	font-size:22px;
+}
+
 .range-select-left{
 	display:inline-block;
 	width:50%;
@@ -135,9 +167,43 @@
 .range-select-right:hover .left-aligned:hover{
 	font-size:22px;
 }
+
+.input-indicator:hover{
+	border-width:0px 1px 0px 1px;
+	border-top-right-radius:1px;
+	border-bottom-right-radius:1px;
+	border-top-left-radius:1px;
+	border-bottom-left-radius:1px;
+	border-style:solid;
+	
+	/*From Stack Overflow Question #2260782*/
+	outline:0px solid transparent;
+}
+.input-indicator:active{
+	border-width:0px 1px 0px 1px;
+	border-top-right-radius:15px;
+	border-bottom-right-radius:15px;
+	border-top-left-radius:15px;
+	border-bottom-left-radius:15px;
+	border-style:solid;
+	
+	/*From Stack Overflow Question #2260782*/
+	outline:0px solid transparent;
+}
+.input-indicator:focus{
+	border-width:0px 1px 0px 1px;
+	border-top-right-radius:15px;
+	border-bottom-right-radius:15px;
+	border-top-left-radius:15px;
+	border-bottom-left-radius:15px;
+	border-style:solid;
+
+	/*From Stack Overflow Question #2260782*/
+	outline:0px solid transparent;
+}
+
 .section-divider-vertical-small{
 	height:1px;
-	position:relative;
 	left:10%;
 	width:80%;
 	margin-top:20px;
@@ -147,13 +213,16 @@
 }
 .section-divider-vertical-large{
 	height:3px;
-	position:relative;
 	left:0%;
 	width:100%;
 	margin-top:10px;
 	margin-bottom:15px;
 	background-color:#ADA7AD;
 	text-align: center;
+}
+.section-spacer-small{
+	width:100%;
+	height:20px;
 }
 .section-spacer-end-small{
 	margin-bottom:20px;
@@ -174,6 +243,10 @@
 	margin-bottom:3px;}
 
 
+
+.range-label{
+	cursor:pointer;
+}
 .section-label-small{
 	text-align:center;
 	font-size:24px;
@@ -195,8 +268,16 @@
 	position:absolute;
 	font-size:16px;
 	top:0%;
-	padding-top:26px;
 	border-style:solid;
+	cursor:pointer;
+}
+.button-right + .popup-menu:hover{
+	display:block;
+	background-color:#EFEDEA;
+	width:45%;
+	right:0%;
+	z-index:2;
+	border-width:1px 1px 1px 1px;
 }
 .button-right:active + .popup-menu{
 	display:block;
@@ -204,15 +285,34 @@
 	width:45%;
 	right:0%;
 	z-index:2;
-	border-width:0px 1px 1px 1px;
+	border-width:1px 1px 1px 1px;
 }
+
+.button-left + .popup-menu:hover{
+	display:block;
+	background-color:#EFEDEA;
+	width:45%;
+	left:0%;
+	z-index:2;
+	border-width:1px 1px 1px 1px;
+}
+
 .button-left:active + .popup-menu{
 	display:block;
 	background-color:#EFEDEA;
 	width:45%;
 	left:0%;
-	z-index:4;
-	border-width:0px 1px 1px 1px;
+	z-index:2;
+	border-width:1px 1px 1px 1px;
+}
+.button-interior + .popup-menu:hover{
+	display:block;
+	background-color:#EFEDEA;
+	width:80%;
+	left:10%;
+	right:10%;
+	z-index:2;
+	border-width:1px 1px 1px 1px;
 }
 .button-interior:active + .popup-menu{
 	display:block;
@@ -221,12 +321,7 @@
 	left:10%;
 	right:10%;
 	z-index:2;
-	border-width:0px 1px 1px 1px;
-}
-.popup-menu:hover{
-	display:block;
-	background-color:#EFEDEA;
-	z-index:2;
+	border-width:1px 1px 1px 1px;
 }
 .popup-menu:hover > .popup-option:hover{
 	font-size:18px;
@@ -237,6 +332,17 @@ html, body{
 	background-color:#EFEDEA;
 	height:99%;
 	width:99%;
+}
+
+.resume-actual{
+	position:inherit;
+	top:5%;
+	left:5%;
+	bottom:5%;
+	right:5%;
+
+	border-width:1px 1px 1px 1px;
+	border-style:solid;
 }
 
 /*Fantastic font from Adilson Gonzalez of Brazil.

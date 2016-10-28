@@ -7,192 +7,216 @@
 	<body>
 		<div class='main-header font-ailerons'>
 			<div class='resume resume-left no-select' id='resumeOptions'>
-				<div class='page-header resume-header'>
-					<span class='button-left'>Return To Index</span>
-					<span class='page-info'></span>
+				<div class='options resume-header'>
+					<div class='options-header'>
+						<div class='row'>
+							<div class='button-left left-aligned'>Return To Index</div>
+							<div class='button-right right-aligned'>Clear Preset</div>
+						</div>
+						<div class='row'>
+							<div class='button-interior center-aligned'>Select Preset</div>
+							<div class='popup-menu'>
+								<div class='section-label-small underlined'>Select Preset</div>
+								<div class='popup-option'>General</div>
+								<div class='popup-option'>Employer</div>
+								<div class='popup-option'>Client</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class='options resume-body'>
 					<div class='options-body'>
-						<div class='set-body'>
-							<div class='section-label-large'>Set Resume Parameters</div>
-							<div class='section-divider-vertical-large'></div>
-							<div class='change-settings'>
-								<div class='row'>
-									<span class='button-interior center-aligned'>Add Contact Info</span>
-									<div class='popup-menu'>
-										<div class='popup-option'>Email</div>
-										<div class='popup-option'>Phone</div>
-										<div class='popup-option'>Address</div>
-									</div>
-								</div>
-								<div class='row'>
-									<span class='button-left left-aligned'>Add Language</span>								
-									<div class='popup-menu'>
-										<div class='popup-option'>C</div>
-										<div class='popup-option'>C++</div>
-										<div class='popup-option'>Python</div>
-										<div class='popup-option'>Javascript</div>
-										<div class='popup-option'>HTML/CSS</div>
-										<div class='popup-option'>SQL</div>
-										<div class='popup-option'>Coldfusion</div>
-									</div>
-									<span class='button-right right-aligned'>Add Framework</span>
-									<div class='popup-menu'>
-										<div class='popup-option'>Jquery</div>
-										<div class='popup-option'>Windows GDI</div>
-									</div>
-								</div>
-								<div class='row'>					
-									<span class='button-left left-aligned'>Add Industry</span>								
-									<div class='popup-menu'>
-										<div class='popup-option'>E-Commerce</div>
-										<div class='popup-option'>Medical</div>
-										<div class='popup-option'>Research</div>
-									</div>
-									<span class='button-right right-aligned'>Add Role</span>
-									<div class='popup-menu'>
-										<div class='popup-option'>Junior Developer</div>
-										<div class='popup-option'>IT/Developer</div>
-										<div class='popup-option'>Computer Programmer</div>
-										<div class='popup-option'>Contractor</div>										
-									</div>
-								</div>
-								<div class='row-XL'>
-									<span class='range-select-left left-aligned'>
-										<div class='range-label'>Dates</div>
-										<div class='row-small'>
-											<span class='left-aligned'>Start</span>
-											<span class='right-aligned'>End</span>
-										</div>
-									</span>
-
-									<span class='range-select-right right-aligned'>
-										<div class='range-label'>Education</div>
-										<div class='row-small'>
-											<span class='left-aligned'>Start</span>
-											<span class='right-aligned'>End</span>
-										</div>
-									</span>
-								</div>
-								<div class='section-spacer-end-small'></div>
-								<div class='section-label-small underlined'>Contact Info</div>
-								<div class='subsection' id='contact'>
-									<span class='circle-delimiter'></span>
-									<span class='setting-option'>Phone</span>
-									<span class='setting-option'>Email</span>
-									<span class='circle-delimiter'></span>
-								</div>
-								<div class='section-label-small underlined'>Languages</div>
-								<div class='subsection' id='languages'>
-									<span class='circle-delimiter'></span>
-									<span class='setting-option'>C++</span>
-									<span class='circle-delimiter'></span>
-								</div>
-								<div class='section-label-small underlined'>Frameworks</div>
-								<div class='subsection' id='languages'>
-									<span class='circle-delimiter'></span>
-									<span class='setting-option'>Boost</span>
-									<span class='circle-delimiter'></span>
-								</div>
-								<div class='section-label-small underlined'>Industries</div>
-								<div class='subsection' id='languages'>
-									<span class='circle-delimiter'></span>
-									<span class='setting-option'>E-Commerce</span>
-									<span class='setting-option'>Medical</span>
-									<span class='circle-delimiter'></span>
-								</div>
-								<div class='section-label-small underlined'>Roles</div>
-								<div class='subsection' id='languages'>
-									<span class='circle-delimiter'></span>
-									<span class='setting-option'>Jr. Developer</span>
-									<span class='setting-option'>Computer Programmer</span>
-									<span class='circle-delimiter'></span>
-								</div>
-								<div class='section-label-small underlined'>Dates Between</div>
-								<div class='subsection' id='languages'>
-									<span class='circle-delimiter'></span>
-									<span class='setting-option'>April 20,1989-June 7, 2946</span>
-									<span class='circle-delimiter'></span>
-								</div>
-								<div class='section-label-small underlined'>Education Between</div>
-								<div class='subsection' id='languages'>
-									<span class='circle-delimiter'></span>
-									<span class='setting-option'>Grade School-Bachelors Degree</span>
-									<span class='circle-delimiter'></span>
+						<div class='section-label-large'>Set Resume Parameters</div>
+						<div class='section-divider-vertical-large'></div>
+						<div class='change-settings'>
+							<div class='row'>
+								<span class='button-interior center-aligned'>Add Contact Info</span>
+								<div class='popup-menu'>
+									<div class='section-label-small underlined'>Add Contact Info</div> 
+									<div class='popup-option'>Phone</div>
+									<div class='popup-option'>Email</div>
+									<div class='popup-option'>Address</div>
+									<div class='popup-option'>Website</div>
 								</div>
 							</div>
-							<div class='section-spacer-end'></div>
+							<div class='row'>
+								<span class='button-left left-aligned'>Add Language</span>								
+								<div class='popup-menu'>
+									<div class='section-label-small underlined'>Add Language</div>
+									<div class='popup-option'>C</div>
+									<div class='popup-option'>C++</div>
+									<div class='popup-option'>Python</div>
+									<div class='popup-option'>Javascript</div>
+									<div class='popup-option'>HTML/CSS</div>
+									<div class='popup-option'>SQL</div>
+									<div class='popup-option'>Coldfusion</div>
+								</div>
+								<span class='button-right right-aligned'>Add Framework</span>
+								<div class='popup-menu'>
+								<div class='section-label-small underlined'>Add Framework</div> 
+									<div class='popup-option'>Jquery</div>
+									<div class='popup-option'>Boost</div>
+									<div class='popup-option'>Windows GDI</div>
+								</div>
+							</div>
+							<div class='row'>					
+								<span class='button-left left-aligned'>Add Industry</span>								
+								<div class='popup-menu'>
+									<div class='section-label-small underlined'>Add Industry</div> 
+									<div class='popup-option'>E-Commerce</div>
+									<div class='popup-option'>Medical</div>
+									<div class='popup-option'>Research</div>
+								</div>
+								<span class='button-right right-aligned'>Add Role</span>
+								<div class='popup-menu'>
+									<div class='section-label-small underlined'>Add Role</div> 
+									<div class='popup-option'>Junior Developer</div>
+									<div class='popup-option'>IT/Developer</div>
+									<div class='popup-option'>Computer Programmer</div>
+									<div class='popup-option'>Contractor</div>										
+								</div>
+							</div>
+							<div class='row-XL'>
+								<span class='range-select-left left-aligned'>
+									<div class='range-label no-select'>Dates</div>
+									<div class='row-small'>
+										<span contenteditable='true' class='left-aligned input-indicator'>Start</span>
+										<span class='text-size-small no-select cursor-pointer'>to</span>
+										<span contenteditable='true' class='right-aligned input-indicator'>Present</span>
+									</div>
+								</span>
+
+								<span class='range-select-right right-aligned'>
+									<div class='range-label no-select'>Education</div>
+									<div class='row-small'>
+										<span class='button-left left-aligned'>Lowest</span>
+										<div class='popup-menu'>
+											<div class='popup-option'>Bachelors</div>
+											<div class='popup-option'>High School</div>
+											<div class='popup-option'>Middle School</div>
+											<div class='popup-option'>Grade School</div>
+										</div>
+										<span class='text-size-small no-select cursor-pointer'>to</span>
+										<span class='button-right right-aligned'>Highest</span>
+										<div class='popup-menu'> 
+											<div class='popup-option'>Bachelors</div>
+											<div class='popup-option'>High School</div>
+											<div class='popup-option'>Middle School</div>
+											<div class='popup-option'>Grade School</div>
+										</div>
+									</div>
+								</span>
+							</div>
+							<div class='section-spacer-end-small'></div>
+							<div class='section-label-small underlined'>Contact Info</div>
+							<div class='subsection' id='contact'>
+								<span class='circle-delimiter'></span>
+								<span class='setting-option'>Phone</span>
+								<span class='setting-option'>Email</span>
+								<span class='circle-delimiter'></span>
+							</div>
+							<div class='section-label-small underlined'>Languages</div>
+							<div class='subsection' id='languages'>
+								<span class='circle-delimiter'></span>
+								<span class='setting-option'>C++</span>
+								<span class='circle-delimiter'></span>
+							</div>
+							<div class='section-label-small underlined'>Frameworks</div>
+							<div class='subsection' id='languages'>
+								<span class='circle-delimiter'></span>
+								<span class='setting-option'>Boost</span>
+								<span class='circle-delimiter'></span>
+							</div>
+							<div class='section-label-small underlined'>Industries</div>
+							<div class='subsection' id='languages'>
+								<span class='circle-delimiter'></span>
+								<span class='setting-option'>E-Commerce</span>
+								<span class='setting-option'>Medical</span>
+								<span class='circle-delimiter'></span>
+							</div>
+							<div class='section-label-small underlined'>Roles</div>
+							<div class='subsection' id='languages'>
+								<span class='circle-delimiter'></span>
+								<span class='setting-option'>Jr. Developer</span>
+								<span class='setting-option'>Computer Programmer</span>
+								<span class='circle-delimiter'></span>
+							</div>
+							<div class='section-label-small underlined'>Dates Between</div>
+							<div class='subsection' id='languages'>
+								<span class='circle-delimiter'></span>
+								<span class='setting-option'>April 20,1989-June 7, 2946</span>
+								<span class='circle-delimiter'></span>
+							</div>
+							<div class='section-label-small underlined'>Education Between</div>
+							<div class='subsection' id='languages'>
+								<span class='circle-delimiter'></span>
+								<span class='setting-option'>Grade School-Bachelors Degree</span>
+								<span class='circle-delimiter'></span>
+							</div>
+						</div>
+						<div class='section-spacer-end'></div>
+					</div>
+				</div>
+				<div class='options-controls bottom'>
+					<div class='section-label-large'>Controls</div>
+					<div class='section-divider-vertical-large'></div>
+					<div class='row'>
+						<span class='button-left button-tall left-aligned'>Update</span>
+						<span class='button-right button-tall right-aligned'>To Raw Text</span>
+					</div>
+				</div>
+			</div>
+			<div class='resume resume-center'>
+				<div class='resume-actual'>
+					<div class='resume-title' id='resume-title'>
+						Ruy Calderon
+					</div>
+					<div class='resume-contact' id='contact-info'>
+						<span class='contact-info-stub' hidden></span>
+						<span class='contact-info-item' info-type='phone'>xxx-xxx-xxxx</span>
+						<span class='contact-info-item' info-type='email'>XYZ@abc.com</span>
+					</div>
+					<div class='resume-section' id='resume-projects'>
+						<div class='resume item'>
+							Project 1
+						</div>
+						<div class='resume item'>
+							Project 2
 						</div>
 					</div>
-					<div class='options-controls bottom'>
-						<div class='section-label-large'>Controls</div>
-						<div class='section-divider-vertical-large'></div>
-						<div class='row'>
-							<span class='button-left left-aligned'>Update Resume</span>
-							<span class='button-right right-aligned'>Resume To Raw Text</span>
+					<div class='resume-section' id='resume-contracts'>
+						<div class='resume-item'>
+							Contract 1
+						</div>
+						<div class='resume-item'>
+							Contract 2
+						</div>
+						<div class='resume-item'>
+							Contract 3
+						</div>
+					</div>
+					<div class='resume-section' id='resume-work-history'>
+						<div class='resume-item'>
+							Job 1
+						</div>
+						<div class='resume-item'>
+							Job 2
+						</div>
+						<div class='resume-item'>
+							Job 3
+						</div>
+					</div>
+					<div class='resume-section' id='resume-education'>
+						<div class='resume-item'>
+							Degree 1
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class='resume-header resume-center'>
-				<div class='resume title' id='resume-title'>
-					Ruy Calderon
-				</div>
-				<div class='resume contact' id='contact-info'>
-					<span class='contact-info-stub' hidden></span>
-					<span class='contact-info-item' info-type='phone'>xxx-xxx-xxxx</span>
-					<span class='contact-info-item' info-type='email'>XYZ@abc.com</span>
-				</div>
-			</div>
-			<div class='resume-body resume-center' id='resumeDisplay'>
-				<div class='resume section' id='resume-projects'>
-					<div class='resume item-stub-hidden' hidden>
-					</div>
-					<div class='resume item'>
-						Project 1
-					</div>
-					<div class='resume item'>
-						Project 2
-					</div>
-				</div>
-				<div class='resume section' id='resume-contracts'>
-					<div class='resume item-stub-hidden' hidden>
-					</div>
-					<div class='resume item'>
-						Contract 1
-					</div>
-					<div class='resume item'>
-						Contract 2
-					</div>
-					<div class='resume item'>
-						Contract 3
-					</div>
-				</div>
-				<div class='resume section' id='resume-work-history'>
-					<div class='resume item-stub-hidden' hidden>
-					</div>
-					<div class='resume item'>
-						Job 1
-					</div>
-					<div class='resume item'>
-						Job 2
-					</div>
-					<div class='resume item'>
-						Job 3
-					</div>
-				</div>
-				<div class='resume section' id='resume-education'>
-					<div class='resume item'>
-						Degree 1
-					</div>
-				</div>
-			</div>
-			<div class='resume-right' id='resumeAnnotations'>
+			<div class='resume resume-right' id='resumeAnnotations'>
 				<div class='annotation-viewport'>
 					<div class='annotation-active inactive'></div>
 				</div>
-			</div>
-			<div class='resume resume-footer' id='resume-footer'>
 			</div>
 		</div>
 	</body>
