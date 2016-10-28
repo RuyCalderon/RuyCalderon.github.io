@@ -345,6 +345,85 @@ html, body{
 	border-style:solid;
 }
 
+
+.font-size-base{
+	font-size:12px;
+	
+}
+.resume-title{
+	font-size:160%;
+	display:block;
+	position:relative;
+	width:80%;
+	left:10%;
+	right:10%;
+	top:0%;
+	height:12%;
+
+	padding-bottom:1%;
+	text-align:center;
+	margin-top:3%;
+	margin-bottom:3%;
+}
+.resume-supercategory{
+	position:relative;
+	left:5%;
+	right:5%;
+}
+.supercategory-title{
+	text-align:left;
+	font-size:120%;
+	font-weight:400;
+	border-bottom:2px solid black;
+}
+.resume-contact{
+	display:block;
+	position:relative;
+	font-size:100%;
+	top:5%;
+}
+.resume-section{
+	display:block;
+	position:relative
+	font-size:100%;
+	left:0%;
+	width:80%;
+	right:20%;
+	text-align:left;
+	margin-top:1%;
+	margin-bottom:1%;
+}
+.section-title{
+	display:block;
+	position:relative;
+	font-size:120%;
+	font-weight:350;
+	left:5%;
+	right:20%;
+}
+.section-content{
+	display:block;
+	position:relative;
+	font-size:100%;
+	left:5%;
+	right:10%;
+}
+.item-title{
+	display:block;
+	position:relative;
+	font-size:120%;
+	font-weight:300;
+	left:5%;
+	right:10%;
+}
+.item-content{
+	display:block;
+	position:relative;
+	font-size:100%;
+	left:5%;
+	right:10%;
+}
+
 /*Fantastic font from Adilson Gonzalez of Brazil.
 His behance profile: https://www.behance.net/agonz*/
 @font-face{
@@ -356,4 +435,12 @@ His behance profile: https://www.behance.net/agonz*/
 }
 .font-ailerons{
 	font-family:"ailerons";
+}
+
+@font-face{
+	font-family: 'Quicksand', sans-serif;
+	src:'https://fonts.googleapis.com/css?family=Quicksand';
+}
+.font-resume{
+	font-family: 'Quicksand', sans-serif;
 }
