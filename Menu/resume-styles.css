@@ -1,25 +1,10 @@
 
-.resume{	text-align:center;	font-size:18px;	height:100%}
-.change-settings{
-	font-size:20px;
-	margin-top:10px;
-}
-.options-controls > .row{
-	font-size:24px;
-}
-.setting-option{
-	font-size:18px;
-	margin-right:5px;
-	margin-left:5px;
-}
-.text-size-small{
-	font-size:75%;
-}
-
-
-.cursor-pointer{
-	cursor:pointer;
-}
+.custom-css{all:unset;}
+.resume{ text-align:center; font-size:18px; height:100%}
+.change-settings{ font-size:18px; margin-top:9px;}
+.options-controls > .row{ font-size:22px;}
+.text-size-small{ font-size:75%;}
+.cursor-pointer{ cursor:pointer;}
 
 .resume-right{	position:absolute;	right:2.5%;	width:17.5%;}
 .resume-left{	position:absolute;	left:2.5%;	width:27.5%;}
@@ -28,6 +13,171 @@
 .resume-body{	position:absolute;	top:10%;	bottom:2.5%; width:100%;}
 
 .bottom{	position:inherit; bottom:5%; width:100%;}
+
+.button-left{	cursor:pointer; border-color:#ADA7AD; border-style:solid; 	border-width:0px 1px 1px 0px;}
+.button-left:hover{ font-size:20px;}
+.button-left:active{ font-size:17px; 	border-width:1px 0px 0px 1px;}
+
+.button-right{	cursor:pointer;  border-color:#ADA7AD; border-style:solid;	border-width:0px 0px 1px 1px;}
+.button-right:hover{ font-size:20px;}
+.button-right:active{font-size:17px; 	border-width:1px 1px 0px 0px;}
+
+.button-interior{  cursor:pointer; border-color:#ADA7AD; border-style:solid; border-width:0px 1px 1px 1px;}
+.button-interior:hover{	font-size:20px;}
+.button-interior:active{	font-size:17px; border-width:1px 0px 0px 0px;}
+
+.options-controls .button-right:hover{font-size:22px;}
+.options-controls .button-right:active{font-size:20px;}
+
+.options-controls .button-left:hover{font-size:22px;}
+.options-controls .button-left:active{font-size:20px;}
+
+.button-tall{ height:36px; vertical-align:center;}
+
+.range-select-left{ position:absolute; left:0px; padding-right:1%; display:inline-block; width:48%; border-color:#ADA7AD; border-style:solid;	border-width:1px 1px 0px 0px;}
+.range-select-right{ position:absolute; right:0px; padding-left:1%; display:inline-block; width:48%; border-color:#ADA7AD; border-style:solid;	border-width:1px 0px 0px 1px;}
+
+.range-select-left:hover>.range-label{ font-size:20px; }
+.range-select-left:hover .right-aligned:hover{ font-size:20px;}
+.range-select-left:hover .left-aligned:hover{ font-size:20px;}
+.range-select-right:hover>.range-label{ font-size:20px;	}
+.range-select-right:hover .right-aligned:hover{ font-size:20px;}
+.range-select-right:hover .left-aligned:hover{ font-size:20px;}
+
+.row{		position:relative; width:100%; height:23px; padding:2px 0px 2px 0px; margin:1px 0px 1px 0px;}
+.row-small{	position:relative; width:100%; height:18px; padding:2px 0px 2px 0px; margin:1px 0px 1px 0px;}
+.row-large{	position:relative; width:100%; height:40px; padding:2px 0px 2px 0px; margin:1px 0px 1px 0px;}
+.row-XL{	position:relative; width:100%; height:60px; padding:2px 0px 2px 0px; margin:1px 0px 1px 0px;}
+
+.left-aligned{	float:left;	min-width:45%;}
+.right-aligned{	float:right; min-width:45%;}
+.center-aligned{ display:inline-block; width:80%; left:10%; right:10%;}
+
+.input-indicator{width:45%; font-size:16px;}
+.input-indicator:hover{ outline:0px solid transparent; border-width:0px 1px 0px 1px; border-style:solid; border-radius:5%;}
+.input-indicator:active,
+.input-indicator:focus{ outline:0px solid transparent; border-width:0px 1px 0px 1px; border-style:solid; border-radius:25%;}
+
+.section-divider-vertical-small{height:1px; left:10%; width:80%; margin:18px 0px 18px 0px; background-color:#ADA7AD; text-align: center; }
+.section-divider-vertical-large{height:3px; left:0%; width:100%; margin:8px 0px 12px 0px; background-color:#ADA7AD; text-align: center; }
+
+.section-spacer-small{ width:100%; height:16px; }
+.section-spacer-end-small{ margin-bottom:16px; }
+.section-spacer-end{ margin-bottom:24px; }
+
+.range-label{ cursor:pointer;}
+.underlined{ text-decoration:underline;}
+
+.section-label-small{ text-align:center; font-size:20px; font-weight:200;}
+.popup-menu .section-label-small{ font-size:16px;}
+
+.section-label-large{ text-align:center; font-size:26px; font-weight:200;}
+
+
+.popup-menu{ display:none; position:absolute; top:0%; border-style:solid; cursor:pointer; font-size:12px;}
+.button-left			+.popup-menu:hover{	display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:45%; left:0%;}
+.button-right			+.popup-menu:hover{	display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:45%; right:0%;}
+.button-interior		+.popup-menu:hover{	display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:80%; right:10%; left:10%;}
+.button-left:active		+.popup-menu{ 		display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:45%; left:0%;}
+.button-right:active	+.popup-menu{		display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:45%; right:0%;}
+.button-interior:active	+.popup-menu{		display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:80%; right:10%; left:10%;}
+
+.popup-menu:hover >.popup-option:hover{ font-size:14px;}
+.popup-menu:hover >.popup-option:active{ font-size:13px;}
+
+.setting-option{ font-size:16px; margin-right:6px; margin-left:6px;}
+.setting-option:hover{ border: 1px dotted black; font-size:18px; text-decoration:line-through; cursor:pointer;}
+.setting-option:active{ border: 1px dotted black; font-size:14px; text-decoration:line-through; cursor:pointer;}
+
+.setting-option:first-child::before,
+.setting-option:last-child::after{content:" "; display:inline-block; min-width:5px; min-height:5px; background-color:black;
+	border-width:3px; border-radius:3px; border-color:black;
+	margin:0px 4px 3px 4px;}
+
+.main-header{ height:95%;}
+html, body{ height:99%; width:99%; background-color:#EFEDEA;}
+
+.font-size-base{ font-size:10px;}
+
+.resume-actual{ position:inherit; top:5%; left:5%; bottom:5%; right:5%; border-width:1px 1px 1px 1px; border-style:solid;}
+
+.resume-title{ 	text-align:center;	font-size:160%; display:block; position:relative; width:80%; left:10%; right:10%; margin:3% 0% 3% 0%; top:0%; height:5%; padding-bottom:1%;}
+.resume-contact{	font-size:100%; display:block; position:relative; top:5%;}
+.resume-name{		font-size:100%; font-weight:800;}
+.contact-info-item{	font-size:60%; font-weight: 200;}
+
+.resume-supercategory{ position:relative; left:4%; right:4%; width:92%;}
+.supercategory-title{ text-align:left; font-size:100%; font-weight:600; border-bottom:2px solid black;}
+.resume-section{	text-align:left; font-size:100%; display:block; position:relative; width:90%; left:0%;  right:6%; margin:1% 0% 1% 0%;}
+.section-title{		font-size:110%; font-weight:400; position:relative; left:2%; right:6%; display:block;}
+.section-content{ 	font-size:100%; 				 position:relative; left:2%; right:6%; display:block;}
+
+.item-title{	font-size:80%; font-weight:600; position:relative; left:2%; right:6%; display:block;}
+.item-content{	font-size:80%; 				 position:relative; left:2%; right:6%; display:block;}
+
+.resume-item{ padding:2px 0px 2px 0px; }
+.resume-item:hover{  border-width:1px 0px 1px 1px; border-style:dashed; border-color: black; }
+.section-item{ padding:2px 0px 2px 0px; }
+.section-item:hover{ border-width:1px 0px 1px 1px; border-style:dashed; border-color: black; }
+
+.detail-role{
+	font-size:80%;
+	font-weight:600;
+	font-style:italic;
+	padding-left:2%;
+	clear:left;
+}
+.detail-date{
+	font-size:80%;
+	font-weight:600;
+	float:right;
+}
+.annotation-bridge{
+	position:absolute;
+	display:none;
+	left:100%;
+	width:20%;
+	height:0px;
+	border-width:1px 0px 0px 0px;
+	margin-top:-3px;
+	border-style:dashed;
+	border-color: black
+}
+/*.resume-item:hover{padding:-1px -1px -1px 0px;}*/
+.resume-item:hover > .annotation-bridge{ display:block;}
+/*.section-item:hover{padding:-1px -1px -1px 0px;}*/
+.section-item:hover > .annotation-bridge{ display:block;}
+
+.annotation{
+	display:none;
+	position:absolute;
+	left:100%;
+	width:250%;
+	font-size:100%;
+	border-width:0px 0px 1px 1px;
+	border-style:dashed;
+	border-color:black;
+	padding: 5% 5% 5% 5%;
+}
+.resume-item:hover > .annotation-bridge > .annotation{ display:block;}
+.section-item:hover > .annotation-bridge > .annotation{ display:block;}
+/*Fantastic font from Adilson Gonzalez of Brazil.
+His behance profile: https://www.behance.net/agonz*/
+@font-face{
+	font-family:"ailerons";
+	src:url('../assets/fonts/Ailerons-Typeface?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/Ailerons-Typeface.ttf') format("truetype"),
+		url('../assets/fonts/Ailerons-Typeface.woff') format("woff"),
+		url('../assets/fonts/Ailerons-Typeface.otf') format("opentype");
+
+@font-face{
+	font-family: 'Quicksand', sans-serif;
+	src:'https://fonts.googleapis.com/css?family=Quicksand';
+}
+}
+.font-ailerons{ font-family:"ailerons"; }
+.font-resume{ font-family: 'Quicksand', sans-serif; }
+
 /*From Stack Overflow Question #826782*/
 .no-select {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -37,410 +187,4 @@
   -ms-user-select: none;       /* Internet Explorer/Edge */
   user-select: none;           /* Non-prefixed version, currently
                                   not supported by any browser */
-}
-.one-of-two{
-	padding-right:10%;
-	padding-left:10%;
-}
-.button-left{
-	border-width:0px 1px 1px 0px;
-	border-color:#ADA7AD;
-	border-style:solid;
-}
-.button-left:hover{
-	cursor:pointer;
-	font-size:22px;
-}
-.button-left:active{
-	cursor:pointer;
-	font-size:19px;
-	border-width:1px 0px 0px 1px;
-}
-.button-right{
-	border-width:0px 0px 1px 1px;
-	border-color:#ADA7AD;
-	border-style:solid;
-}
-.button-right:hover{
-	cursor:pointer;
-	font-size:22px;
-}
-.button-right:active{
-	cursor:pointer;
-	font-size:19px;
-	border-width:1px 1px 0px 0px;
-}
-.button-interior{
-	border-width:0px 1px 1px 1px;
-	border-color:#ADA7AD;
-	border-style:solid;
-}
-.button-interior:hover{
-	cursor:pointer;
-	font-size:22px;
-}
-.button-interior:active{
-	cursor:pointer;
-	font-size:19px;
-	border-width:1px 0px 0px 0px;
-}
-.row-small{
-	position:relative;
-	width:100%;
-	height:18px;
-}
-.row-large{
-	position:relative;
-	width:100%;
-	height:40px;
-}
-.row-XL{
-	position:relative;
-	width:100%;
-	height:60px;
-}
-.row{
-	position:relative;
-	height:25px;
-	width:100%;
-	padding-top:2px;
-	padding-bottom:2px;
-	margin-top:1px;
-	margin-bottom:1px;
-}
-.left-aligned{
-	float:left;
-	width:45%;
-}
-.right-aligned{
-	float:right;
-	width:45%;
-}
-.center-aligned{
-	display:inline-block;
-	width:80%;
-	left:10%;
-	right:10%;
-}
-.button-tall{
-	height:40px;
-	vertical-align: center;
-}
-
-
-.options-controls .button-left:hover{
-	font-size:26px;
-}
-.options-controls .button-right:hover{
-	font-size:26px;
-}
-.options-controls .button-left:active{
-	font-size:22px;
-}
-.options-controls .button-right:active{
-	font-size:22px;
-}
-
-.range-select-left{
-	display:inline-block;
-	width:50%;
-}
-.range-select-right{
-	display:inline-block;
-	width:50%;
-}
-.range-select-left:hover>.range-label{
-	font-size:22px;
-}
-.range-select-left:hover .right-aligned:hover{
-	font-size:22px;
-}
-.range-select-left:hover .left-aligned:hover{
-	font-size:22px;
-}
-.range-select-right:hover>.range-label{
-	font-size:22px;	
-}
-.range-select-right:hover .right-aligned:hover{
-	font-size:22px;
-}
-.range-select-right:hover .left-aligned:hover{
-	font-size:22px;
-}
-
-.input-indicator:hover{
-	border-width:0px 1px 0px 1px;
-	border-top-right-radius:1px;
-	border-bottom-right-radius:1px;
-	border-top-left-radius:1px;
-	border-bottom-left-radius:1px;
-	border-style:solid;
-	
-	/*From Stack Overflow Question #2260782*/
-	outline:0px solid transparent;
-}
-.input-indicator:active{
-	border-width:0px 1px 0px 1px;
-	border-top-right-radius:15px;
-	border-bottom-right-radius:15px;
-	border-top-left-radius:15px;
-	border-bottom-left-radius:15px;
-	border-style:solid;
-	
-	/*From Stack Overflow Question #2260782*/
-	outline:0px solid transparent;
-}
-.input-indicator:focus{
-	border-width:0px 1px 0px 1px;
-	border-top-right-radius:15px;
-	border-bottom-right-radius:15px;
-	border-top-left-radius:15px;
-	border-bottom-left-radius:15px;
-	border-style:solid;
-
-	/*From Stack Overflow Question #2260782*/
-	outline:0px solid transparent;
-}
-
-.section-divider-vertical-small{
-	height:1px;
-	left:10%;
-	width:80%;
-	margin-top:20px;
-	margin-bottom:20px;
-	background-color:#ADA7AD;
-	text-align: center;
-}
-.section-divider-vertical-large{
-	height:3px;
-	left:0%;
-	width:100%;
-	margin-top:10px;
-	margin-bottom:15px;
-	background-color:#ADA7AD;
-	text-align: center;
-}
-.section-spacer-small{
-	width:100%;
-	height:20px;
-}
-.section-spacer-end-small{
-	margin-bottom:20px;
-}
-.section-spacer-end{
-	margin-bottom:30px;
-}
-.circle-delimiter{
-	display:inline-block;
-	min-width:6px;
-	min-height:6px;
-	border-width:3px;
-	border-radius:3px;
-	border-color:black;
-	background-color:black;
-	margin-left:5px;
-	margin-right:5px;
-	margin-bottom:3px;}
-
-
-
-.range-label{
-	cursor:pointer;
-}
-.section-label-small{
-	text-align:center;
-	font-size:24px;
-	font-weight:200;
-}
-.section-label-large{
-	text-align:center;
-	font-size:32px;
-	font-weight:200;
-}
-
-.underlined{
-	border-style:solid;
-	border-width:0px 0px 1px 0px;
-}
-
-.popup-menu{
-	display:none;
-	position:absolute;
-	font-size:16px;
-	top:0%;
-	border-style:solid;
-	cursor:pointer;
-}
-.button-right + .popup-menu:hover{
-	display:block;
-	background-color:#EFEDEA;
-	width:45%;
-	right:0%;
-	z-index:2;
-	border-width:1px 1px 1px 1px;
-}
-.button-right:active + .popup-menu{
-	display:block;
-	background-color:#EFEDEA;
-	width:45%;
-	right:0%;
-	z-index:2;
-	border-width:1px 1px 1px 1px;
-}
-
-.button-left + .popup-menu:hover{
-	display:block;
-	background-color:#EFEDEA;
-	width:45%;
-	left:0%;
-	z-index:2;
-	border-width:1px 1px 1px 1px;
-}
-
-.button-left:active + .popup-menu{
-	display:block;
-	background-color:#EFEDEA;
-	width:45%;
-	left:0%;
-	z-index:2;
-	border-width:1px 1px 1px 1px;
-}
-.button-interior + .popup-menu:hover{
-	display:block;
-	background-color:#EFEDEA;
-	width:80%;
-	left:10%;
-	right:10%;
-	z-index:2;
-	border-width:1px 1px 1px 1px;
-}
-.button-interior:active + .popup-menu{
-	display:block;
-	background-color:#EFEDEA;
-	width:80%;
-	left:10%;
-	right:10%;
-	z-index:2;
-	border-width:1px 1px 1px 1px;
-}
-.popup-menu:hover > .popup-option:hover{
-	font-size:18px;
-}
-
-.main-header{height:95%;}
-html, body{
-	background-color:#EFEDEA;
-	height:99%;
-	width:99%;
-}
-
-.resume-actual{
-	position:inherit;
-	top:5%;
-	left:5%;
-	bottom:5%;
-	right:5%;
-
-	border-width:1px 1px 1px 1px;
-	border-style:solid;
-}
-
-
-.font-size-base{
-	font-size:12px;
-	
-}
-.resume-title{
-	font-size:160%;
-	display:block;
-	position:relative;
-	width:80%;
-	left:10%;
-	right:10%;
-	top:0%;
-	height:12%;
-
-	padding-bottom:1%;
-	text-align:center;
-	margin-top:3%;
-	margin-bottom:3%;
-}
-.resume-supercategory{
-	position:relative;
-	left:5%;
-	right:5%;
-}
-.supercategory-title{
-	text-align:left;
-	font-size:120%;
-	font-weight:400;
-	border-bottom:2px solid black;
-}
-.resume-contact{
-	display:block;
-	position:relative;
-	font-size:100%;
-	top:5%;
-}
-.resume-section{
-	display:block;
-	position:relative
-	font-size:100%;
-	left:0%;
-	width:80%;
-	right:20%;
-	text-align:left;
-	margin-top:1%;
-	margin-bottom:1%;
-}
-.section-title{
-	display:block;
-	position:relative;
-	font-size:120%;
-	font-weight:350;
-	left:5%;
-	right:20%;
-}
-.section-content{
-	display:block;
-	position:relative;
-	font-size:100%;
-	left:5%;
-	right:10%;
-}
-.item-title{
-	display:block;
-	position:relative;
-	font-size:120%;
-	font-weight:300;
-	left:5%;
-	right:10%;
-}
-.item-content{
-	display:block;
-	position:relative;
-	font-size:100%;
-	left:5%;
-	right:10%;
-}
-
-/*Fantastic font from Adilson Gonzalez of Brazil.
-His behance profile: https://www.behance.net/agonz*/
-@font-face{
-	font-family:"ailerons";
-	src:url('../assets/fonts/Ailerons-Typeface?#iefix') format('embedded-opentype'),
-		url('../assets/fonts/Ailerons-Typeface.ttf') format("truetype"),
-		url('../assets/fonts/Ailerons-Typeface.woff') format("woff"),
-		url('../assets/fonts/Ailerons-Typeface.otf') format("opentype");
-}
-.font-ailerons{
-	font-family:"ailerons";
-}
-
-@font-face{
-	font-family: 'Quicksand', sans-serif;
-	src:'https://fonts.googleapis.com/css?family=Quicksand';
-}
-.font-resume{
-	font-family: 'Quicksand', sans-serif;
 }
