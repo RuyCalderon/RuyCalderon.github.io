@@ -27,7 +27,6 @@ $(document).ready(function(){
 				$(this).remove(); 
 			}
 		}
-		
 	});
 	$('#clearPreset').mouseup(removeAllOptions);
 	$('.popup-option').mouseup(function(event){
@@ -53,19 +52,22 @@ $(document).ready(function(){
 		$(set_selector).html(value_selected);
 	});
 	$('#date-min,#date-max').on('mouseenter',function(){
-		$(this).attr('tempStorage',$(this).html());
+		$(this).attr('tempStorage',$(this).attr('value'));
 		$(this).attr('value','MM/YY');
 	}).on('mouseleave',function(){
 		$(this).attr('value',$(this).attr('tempStorage'));
 	}).on('click',function(){
 		$(this).select();
-	}).on('change',function(event){
+	}).on('keypress',function(event){
 		//think of how I want to do the check letter-by-letter
 		//two layers:
 		//character type
 		//then format
 		//CHECK INPUT SPEC FOR THIS FEATURE!!!! (I think I saw it,
 		//which is why I wanted to use inputs in the first place)
+		var pressedKey = event.originalEvent.key;
+		//if directly after a click (where it selects), fires PRIOR to the selection being deleted by the keypress
+		//need to work with this. But good shit.
 		var newValue = $(this).attr('value');
 		if(newValue != 'oh my'){
 			console.log("Where's George Takei?");
