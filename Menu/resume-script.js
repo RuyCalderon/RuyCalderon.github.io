@@ -1,7 +1,6 @@
 console.log('resume-test');
 
 function toIndex(){ window.location = '../index.html'; };
-function setPreset(preset_type){};
 function addOption(attributeValue,displayValue){ return "<span class='setting-option' value='"+attributeValue+"'>"+displayValue+"</span>"; };
 function removeOption(){ $(this).remove(); }
 function removeAllOptions(){ 
@@ -15,8 +14,7 @@ $(document).ready(function(){
 	var pageWidth = parseFloat($('.main-header').css('width').replace('px',''));
 	var pageHeight = parseFloat($('.main-header').css('height').replace('px',''));
 
-	$('.range-select-right .popup-menu').children().mouseup(function(){console.log('right-up');});
-	$('.range-select-left .popup-menu').children().mouseup(function(){console.log('left-up');});
+	$('#clearPreset').mouseup(removeAllOptions);
 	$('.setting-option').mouseup( function(event){
 		if(event.button == 0){ 
 			if($(this).parent().attr('class').search('range') > 0){
@@ -28,7 +26,6 @@ $(document).ready(function(){
 			}
 		}
 	});
-	$('#clearPreset').mouseup(removeAllOptions);
 	$('.popup-option').mouseup(function(event){
 		var set_selector = '#set-'+$(this).parent('.popup-menu').attr('id');
 		var value_selected = $(this).attr('value');
@@ -48,36 +45,58 @@ $(document).ready(function(){
 		var location_specifier = $(this).parent('.popup-menu.range').attr('id').split('-');
 		var set_selector = '#set-'+location_specifier[0]+' .'+location_specifier[1];
 		var value_selected = $(this).attr('value');
-		$(set_selector).attr('value',value_selected);
-		$(set_selector).html(value_selected);
+		$(set_selector).attr('value',value_selected).html(value_selected);
 	});
-	$('#date-min,#date-max').on('mouseenter',function(){
-		$(this).attr('tempStorage',$(this).attr('value'));
-		$(this).attr('value','MM/YY');
-	}).on('mouseleave',function(){
-		$(this).attr('value',$(this).attr('tempStorage'));
-	}).on('click',function(){
+	$('#date-min,#date-max').on('click',function(){
 		$(this).select();
 	}).on('keypress',function(event){
-		//think of how I want to do the check letter-by-letter
-		//two layers:
-		//character type
-		//then format
-		//CHECK INPUT SPEC FOR THIS FEATURE!!!! (I think I saw it,
-		//which is why I wanted to use inputs in the first place)
-		var pressedKey = event.originalEvent.key;
-		//if directly after a click (where it selects), fires PRIOR to the selection being deleted by the keypress
-		//need to work with this. But good shit.
-		var newValue = $(this).attr('value');
-		if(newValue != 'oh my'){
-			console.log("Where's George Takei?");
+		var currentValue = $(this).prop('value');
+		var currentKey = event.originalEvent.key;
+		if(currentKey != 'Backspace' && currentKey != 'Delete'){
+			if(currentValue=='MM/YY')
+				currentValue ='';
+			if(currentKey >= '0' && currentKey <='9'){
+				switch(currentValue.length){
+					case 0:{
+						if(currentKey >'1')
+							$(this).prop('value', '0');
+					}break;
+					case 1:{
+						if(currentKey >'2' && currentValue != '0')
+							$(this).prop('value','0'+currentValue+'/');
+						if(currentKey == '0' && currentValue == '0')
+							event.preventDefault();
+					}break;
+					case 2:{
+						$(this).prop('value',currentValue+'/');
+					}break;
+					default: break;
+				}
+			}
+			else
+				event.preventDefault();
+		}
+	}).on('change',function(){
+		var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+		var currentValue = $(this).prop('value');
+		if(!currentValue.match(/\d\d\/\d\d/)){
+			$(this).prop('value','MM/YY');
+		}
+		else{
+			var m_y_Split = currentValue.split('\/');
+			var month = months[parseInt(m_y_Split[0])-1];
+			var year = ((parseInt(m_y_Split[1]) > 43) ? '19':'20') + m_y_Split[1];
+			var displayDate = month + ', ' + year;
+			var dateBound = $(this).attr('id').split('-')[1];
+			$('#set-dates').find('.' + dateBound).attr('value',year+m_y_Split[0]);
+			$('#set-dates').find('.' + dateBound).html(displayDate);
 		}
 	});
 
 	var Data={};
 	var Name = 'Ruy Gaspar Calderon';
 	var ContactInfo = {'Phone':['847','207','8622'], 'Email':'ruy.calderon@gmail.com','Address':['494 Park Ave', 'Glencoe Il', '60022'],'website':'RuyCalderon.github.io'};
-	var LanguageKeywords = {'C':'','C++':'','Python':'','Javascript':'','SQL':'','HTML':'','CSS':'','Coldfusion':''};
+	var Languages = {'C/C++':'','Python':'','Javascript':'','SQL':'','HTML':'','CSS':'','Coldfusion':''};
 	var FrameworkKeywords = {'JQuery':'','Windows API':''};
 	var IndustryKeywords = {'ECommerce':'','Medical':'','Startup':'','Gaming':''};
 	var RoleKeywords = {'Junior Developer':'', 'IT/Developer':'','Computer Programmer':'','Contractor':''};

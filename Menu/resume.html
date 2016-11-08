@@ -82,9 +82,9 @@
 									<span class='range-select-left'>
 										<div class='range-label no-select underlined'>Dates</div>
 										<div class='row-small'>
-											<input type='text' class='left-aligned input-indicator custom-css' id='date-min' default-value='11/13' value='start date'></input>
+											<input type='text' class='left-aligned input-indicator custom-css' id='date-min' value='MM/YY' maxlength='5'></input>
 											<span class='text-size-small no-select cursor-pointer'>to</span>
-											<input type='text' class='right-aligned input-indicator custom-css' id='date-max' default-value='Present' value='end date'></input>
+											<input type='text' class='right-aligned input-indicator custom-css' id='date-max' value='MM/YY' maxlength='5'></input>
 										</div>
 									</span>
 
@@ -143,15 +143,15 @@
 								</div>
 								<div class='section-label-small underlined'>Dates Between</div>
 								<div class='subsection range' id='set-dates'>
-									<span class='setting-option' value='198904' default-value='November, 2013' >April, 1989</span>
+									<span class='setting-option min' value='' default-value='Start' >Start</span>
 									<span class='text-size-small no-select cursor-pointer'>to</span>
-									<span class='setting-option' value='294607' default-value='Present'>June, 2946</span>
+									<span class='setting-option max' value='' default-value='End'>End</span>
 								</div>
 								<div class='section-label-small underlined'>Education Between</div>
 								<div class='subsection range' id='set-education'>
-									<span class='setting-option min' value='bachelors' default-value='Associates'>Bachelors</span>
+									<span class='setting-option min' value='' default-value='Minumum'>Minimum</span>
 									<span class='text-size-small no-select cursor-pointer'>to</span>
-									<span class='setting-option max' value='masters' default-value='Post-Doc'>Masters</span>
+									<span class='setting-option max' value='' default-value='Maxiumum'>Maximum</span>
 								</div>
 							</div>
 						</div>

@@ -143,9 +143,7 @@ html, body{ height:99%; width:99%; background-color:#EFEDEA;}
 	border-style:dashed;
 	border-color: black
 }
-/*.resume-item:hover{padding:-1px -1px -1px 0px;}*/
 .resume-item:hover > .annotation-bridge{ display:block;}
-/*.section-item:hover{padding:-1px -1px -1px 0px;}*/
 .section-item:hover > .annotation-bridge{ display:block;}
 
 .annotation{
@@ -153,11 +151,12 @@ html, body{ height:99%; width:99%; background-color:#EFEDEA;}
 	position:absolute;
 	left:100%;
 	width:250%;
-	font-size:100%;
+	font-size:125%;
 	border-width:0px 0px 1px 1px;
 	border-style:dashed;
 	border-color:black;
 	padding: 5% 5% 5% 5%;
+	margin-bottom:30%;
 }
 .resume-item:hover > .annotation-bridge > .annotation{ display:block;}
 .section-item:hover > .annotation-bridge > .annotation{ display:block;}
