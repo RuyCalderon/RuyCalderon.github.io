@@ -168,12 +168,12 @@ His behance profile: https://www.behance.net/agonz*/
 		url('../assets/fonts/Ailerons-Typeface.ttf') format("truetype"),
 		url('../assets/fonts/Ailerons-Typeface.woff') format("woff"),
 		url('../assets/fonts/Ailerons-Typeface.otf') format("opentype");
-
+}
 @font-face{
 	font-family: 'Quicksand', sans-serif;
 	src:'https://fonts.googleapis.com/css?family=Quicksand';
 }
-}
+
 .font-ailerons{ font-family:"ailerons"; }
 .font-resume{ font-family: 'Quicksand', sans-serif; }
 
@@ -187,3 +187,4 @@ His behance profile: https://www.behance.net/agonz*/
   user-select: none;           /* Non-prefixed version, currently
                                   not supported by any browser */
 }
+#notification{position:fixed; left:40%; right:40%; top:40%; bottom:40%; border:1px solid black; font-family:"ailerons"; font-size: 18px; background-color:#EFEDEA; z-index:1; text-align:center; padding-top:40px;}

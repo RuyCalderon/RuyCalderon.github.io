@@ -7,6 +7,10 @@ His behance profile: https://www.behance.net/agonz*/
 		url('../assets/fonts/Ailerons-Typeface.woff') format("woff"),
 		url('../assets/fonts/Ailerons-Typeface.otf') format("opentype");
 }
+@font-face{
+	font-family: 'Quicksand', sans-serif;
+	src:'https://fonts.googleapis.com/css?family=Quicksand';
+}
 
 .font-ailerons{
 	font-family:"ailerons";
@@ -79,6 +83,7 @@ His behance profile: https://www.behance.net/agonz*/
 }
 .submenu-popup{
 	display:none;
+	font-family: 'Quicksand', sans-serif;
 }
 
 .submenu-option{
@@ -111,6 +116,7 @@ His behance profile: https://www.behance.net/agonz*/
 }
 
 .nested-menu-option{ 
+	font-family: 'Quicksand', sans-serif;
 	font-size:22px; 
 	margin-right:20px; 
 	margin-left:20px;
@@ -153,3 +159,63 @@ html, body{
 	height:99%;
 	width:99%;
 }
+
+.custom-css{all:unset;}
+.header{position:fixed; top:2%; height:10%; left:2%; width:96%;}
+.body{position:fixed; top:14%; height:82%; left:2%; width:96%;}
+.left{position:fixed; left:5%; width:40%; top:20%; bottom:8%;}
+.right{position:fixed; right:5%; width:40%; top:20%; bottom:8%;}
+
+
+.button-left{ position:relative; left:0%; width:100%; top:0%; height:20%;	
+	font-size:36px; text-align:center; cursor:pointer; border-color:#ADA7AD; border-style:solid; 	border-width:0px 1px 1px 0px;}
+.button-left:hover{ font-size:42px; 	border-width:1px 0px 0px 1px;}
+
+.button-right{ position:relative; right:0%; width:100%; top:0%; height:20%;
+	font-size:36px; text-align:center;	cursor:pointer;	border-color:#ADA7AD; border-style:solid;	border-width:0px 0px 1px 1px;}
+.button-right:hover{font-size:42px; 	border-width:1px 1px 0px 0px;}
+
+.button-interior{	text-align:center;	cursor:pointer;	border-color:#ADA7AD; border-style:solid; border-width:0px 1px 1px 1px;}
+.button-interior:hover{	font-size:20px;}
+.button-interior:active{	font-size:17px; border-width:1px 0px 0px 0px;}
+
+.popup-menu{ display:none; position:absolute; top:0%; left:0%; height:20%; width:100%; border-style:solid; cursor:pointer; font-size:24px;}
+.button-left			+.popup-menu:hover{	display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:100%; left:0%;}
+.button-right			+.popup-menu:hover{	display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:100; right:0%;}
+.button-interior		+.popup-menu:hover{	display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:80%; right:10%; left:10%;}
+.button-left:hover		+.popup-menu{ 		display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:100%; left:0%;}
+.button-right:hover		+.popup-menu{		display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:100%; right:0%;}
+.button-interior:hover	+.popup-menu{		display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:80%; right:10%; left:10%;}
+
+span.popup-option{display:inline-block; position:relative; text-align:center;width:45%; padding-left:1%;}
+.popup-menu:hover >.popup-option:hover{ font-size:24px;}
+.popup-menu:hover >.popup-option:hover{ font-size:24px;}
+.underlined{ text-decoration:underline;}
+.section-label-small{ text-align:center; font-size:48px; font-weight:200;}
+
+.popup-option > .button-left { text-align:center; font-size:20px; font-weight:200; }
+.popup-option > .popup-menu { position:absolute; }
+.popup-option > .popup-menu { font-size:20px;}
+.popup-option > .popup-menu >.section-label-small { text-align:center; background-color:#EFEDEA; font-size:20px; font-weight:200;}
+.popup-option > .popup-menu >.popup-option{ font-size:16px; background-color:#EFEDEA;}
+.popup-option > .popup-menu >.popup-option:last-of-type{ margin-bottom:5%;}
+.popup-option > .popup-menu >.popup-option:hover{ font-size:18px;}
+.popup-option > .popup-menu >.popup-option:active{ font-size:17px;}
+
+.section-label-tiny{ font-size:18px;}
+.section-label-tiny:hover{ font-size:19px;}
+.section-label-tiny:active{ font-size:17px;}
+
+/*.left .option-content{ display:none; font-size:14px; position:fixed; left:36%; width:10%; top:45%; background-color:#EFEDEA; float:left; text-align:left;}
+.right .option-content{ display:none; font-size:14px; position:fixed; right:36%; width:10%; top:45%; background-color:#EFEDEA; float:left; text-align:left;}*/
+.option-content{display:none; font-size:14px; position:fixed; left:35%; width:30%; top:45%; background-color:#EFEDEA; float:left; text-align:center; z-index: 1;}
+
+.left .option-content +.associated-image{display:none; position:fixed; left:6%; width:28%; top:40%; bottom:12%; background-color:#EFEDEA; z-index: -1;}
+.right .option-content +.associated-image{display:none; position:fixed; right:6%; width:28%; top:40%; bottom:12%; background-color:#EFEDEA; z-index: -1;}
+.option-content:hover +.associated-image{ display:block; }
+.section-label-tiny:hover ~.associated-image{ display:block; }
+
+.option-content:hover{ display:block;}
+.associated-image:hover{display:block;}
+.section-label-tiny:hover +.option-content{ display:block; }
+.option-content .section-label-small{font-size:22px; text-align:center;}
