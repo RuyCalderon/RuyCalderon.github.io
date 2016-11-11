@@ -3,26 +3,27 @@
 	<head>
 		<script type='text/javascript' src='../jquery.min.js'></script>
 		<script src='about-script.js'></script>
-		<link rel='stylesheet' typ='text/css' href='about-styles.css'>
+		<link rel='stylesheet' type='text/css' href='"https://fonts.googleapis.com/css?family=Aldrich|Quicksand'>
+		<link rel='stylesheet' type='text/css' href='about-styles.css'>
 	</head>
 	<body>
-		<div class='header font-ailerons button-back' onclick='toIndex()'>Back To Index</div>
-		<div class='body font-ailerons'>
+		<div class='header font-ailerons button-interior' onclick='toIndex()'>Back To Index</div>
+		<div class='body font-ailerons no-select'>
 			<span class='left'>
 				<div class='floating'>
 					<button class='button-left custom-css '>At Work</button>
 					<div class='popup-menu'>
 						<div class='section-label-small underlined'>At Work</div>
 						<span class='popup-option'>
-							<button class='button-left custom-css '>Qualities</button>
+							<button class='button-left custom-css' id='qualities'>Qualities</button>
 							<div class='popup-menu'>
-								<div class='section-label-small underlined'>Qualities</div>
+								<div class='section-label-small'>Qualities</div>
 								<div class='popup-option'>
 								<!-- Sub-Option 1 -->
 									<div class='section-label-tiny'>Personable</div>
 									<div class='option-content'>
-										<div class='section-label-small underlined'>Personable</div>
-										<div>I value getting along with the people I work with very highly and put effort into ensuring that is the case.</div>
+										<div class='section-label-content'>Personable</div>
+										<div class='content-text'>I value getting along with the people I work with very highly and put effort into ensuring that is the case.</div>
 									</div>
 									<div class='associated-image'></div>
 								</div>
@@ -30,8 +31,8 @@
 								<!-- Sub-Option 2 -->
 									<div class='section-label-tiny'>Flexible</div>
 									<div class='option-content'>
-										<div class='section-label-small underlined'>Flexible</div>
-										<div>Willing and able to adapt my coding style to any conventions. Comfortable working with legacy and/or undocumented codebases.</div>
+										<div class='section-label-content'>Flexible</div>
+										<div class='content-text'>Willing and able to adapt my coding style to any conventions. Comfortable working with legacy and/or undocumented codebases.</div>
 									</div>
 									<div class='associated-image'></div>
 								</div>
@@ -39,23 +40,23 @@
 								<!-- Sub-Option 2 -->
 									<div class='section-label-tiny'>Exacting</div>
 									<div class='option-content'>
-										<div class='section-label-small underlined'>Exacting</div>
-										<div>Will work hard to ensure that I only have to solve a problem once.</div>
+										<div class='section-label-content'>Exacting</div>
+										<div class='content-text'>I am exacting in my work. I value only ever have to solve the same problem once.</div>
 									</div>
 									<div class='associated-image'></div>
 								</div>
 							</div>
 						</span>
 						<span class='popup-option'>
-							<button class='button-left custom-css '>Proficiencies</button>
+							<button class='button-left custom-css' id='proficiencies'>Proficiencies</button>
 							<div class='popup-menu'>
-								<div class='section-label-small underlined'>Proficiencies</div>
+								<div class='section-label-small'>Proficiencies</div>
 								<div class='popup-option'>
 								<!-- Sub-Option 1 -->
 									<div class='section-label-tiny'>Languages</div>
 									<div class='option-content'>
-										<div class='section-label-small underlined'>Languages</div>
-										<div>C/C++<br/>Python<br/>Javascript<br/>HTML5/CSS3<br/>SQL<br/>Coldfusion</div>
+										<div class='section-label-content'>Languages</div>
+										<div class='content-text list'>C/C++<br/>Python<br/>Javascript<br/>HTML5/CSS3<br/>SQL<br/>Coldfusion</div>
 									</div>
 									<div class='associated-image'></div>
 								</div>
@@ -63,17 +64,17 @@
 								<!-- Sub-Option 2 -->
 									<div class='section-label-tiny'>Source Control</div>
 									<div class='option-content'>
-										<div class='section-label-small underlined'>Source Control</div>
-										<div>Git<br/>SVN</div>
+										<div class='section-label-content'>Source Control</div>
+										<div class='content-text list'>Git<br/>SVN</div>
 									</div>
 									<div class='associated-image'></div>
 								</div>
 								<div class='popup-option'> 
 								<!-- Sub-Option 2 -->
-									<div class='section-label-tiny'>Preferences</div>
+									<div class='section-label-tiny'>Dev Environment</div>
 									<div class='option-content'>
-										<div class='section-label-small underlined'>Preferences</div>
-										<div>Sublime Text<br/>MSVC<br/>Tabs</div>
+										<div class='section-label-content'>Preferences</div>
+										<div class='content-text list'>Sublime Text<br/>Git Bash<br/>MSVC<br/>Visual Studio<br/><br/>...Tabs</div>
 									</div>
 									<div class='associated-image'></div>
 								</div>
@@ -88,15 +89,15 @@
 					<div class='popup-menu'>
 						<div class='section-label-small underlined'>After Work</div>
 						<span class='popup-option'>
-							<button class='button-left custom-css '>Indoors</button>
+							<button class='button-left custom-css' id='indoors'>Indoors</button>
 							<div class='popup-menu'>
-								<div class='section-label-small underlined'>Indoors</div>
+								<div class='section-label-small'>Indoors</div>
 								<div class='popup-option'>
 								<!-- Sub-Option 1 -->
-									<div class='section-label-tiny'>Programming Projects</div>
+									<div class='section-label-tiny'>Programming</div>
 									<div class='option-content'>
-										<div class='section-label-small underlined'>Programming Projects</div>
-										<div>I make sure to push my boundaries and experiment with techniques/languages/paradigms as much as possible.</div>
+										<div class='section-label-content'>Programming</div>
+										<div class='content-text'>I make sure to push my boundaries and experiment with techniques / languages / paradigms as much as possible on my own time.</div>
 									</div>
 									<div class='associated-image'></div>
 								</div>
@@ -104,8 +105,8 @@
 								<!-- Sub-Option 2 -->
 									<div class='section-label-tiny'>Reading</div>
 									<div class='option-content'>
-										<div class='section-label-small underlined'>Reading</div>
-										<div>There are few things I enjoy more than getting caught up in a book and binge-reading for a whole weekend. (Or longer!) Science Fiction is first and foremost in my heart. Some notables: (and Of course there are many others, but there's only so much time, and screen space).<br/>The Foundation series<br/>The Ringworld Series<br/>The Rama Series<br/>In other genres some great ones are: <br/>"The Flamingos Smile" by Stephen Jay Gould<br/>any biography by Walter Isaacson (Einstein in particular)<br/>"Code: The Secret Language of Software and Hardware" by Charles Petzold.</div>
+										<div class='section-label-content'>Reading</div>
+										<div class='content-text'>There are few things I enjoy more than getting caught up in a book and binge-reading for a whole weekend. (Or longer!) Science Fiction is first and foremost in my heart. Some notables: (and Of course there are many others, but there's only so much time, and screen space).<br/>The Foundation series<br/>The Ringworld Series<br/>The Rama Series<br/>In other genres some great ones are: <br/>"The Flamingos Smile" by Stephen Jay Gould<br/>any biography by Walter Isaacson (Einstein in particular)<br/>"Code: The Secret Language of Software and Hardware" by Charles Petzold.</div>
 										</div>
 									<div class='associated-image'></div>
 								</div>
@@ -113,23 +114,23 @@
 								<!-- Sub-Option 2 -->
 									<div class='section-label-tiny'>Gaming</div>
 									<div class='option-content'>
-										<div class='section-label-small underlined'>Gaming</div>
-										<div>I've been playing games since I was I was four. I started with Treasure Mountain going to Logical Journey of the Zoombinis, and off to Mariokart 64 and now to Steam (where 90% of my games have never been installed).There's just not enough time in the day.</div>
+										<div class='section-label-content'>Gaming</div>
+										<div class='content-text'>I've been playing games since I was I was four. I started with Treasure Mountain going to Logical Journey of the Zoombinis, and off to Mariokart 64 and now to Steam (where 90% of my games have never been installed).There's just not enough time in the day.</div>
 									</div>
 									<div class='associated-image'></div>
 								</div>
 							</div>
 						</span>
 						<span class='popup-option'>
-							<button class='button-left custom-css '>Outdoors</button>
+							<button class='button-left custom-css' id='outdoors'>Outdoors</button>
 							<div class='popup-menu'>
-								<div class='section-label-small underlined'>Outdoors</div>
+								<div class='section-label-small'>Outdoors</div>
 								<div class='popup-option'>
 								<!-- Sub-Option 1 -->
 									<div class='section-label-tiny'>Running</div>
 									<div class='option-content'>
-										<div class='section-label-small underlined'>Running</div>
-										<div>This is my meditation, I usually run distance but have been trying to incorporate sprinting as much as possible in my routine.</div>
+										<div class='section-label-content'>Running</div>
+										<div class='content-text'>This is my meditation, I usually run distance but have been trying to incorporate sprinting as much as possible in my routine.</div>
 									</div>
 									<div class='associated-image'></div>
 								</div>
@@ -137,8 +138,8 @@
 								<!-- Sub-Option 2 -->
 									<div class='section-label-tiny'>Metalworking</div>
 									<div class='option-content'>
-										<div class='section-label-small underlined'>Metalworking</div>
-										<div>Being able to create something in the physical world is at times a welcome counterpoint to my work in the digital one.</div>
+										<div class='section-label-content'>Metalworking</div>
+										<div class='content-text'>Being able to create something in the physical world is at times a welcome counterpoint to my work in the digital one.</div>
 									</div>
 									<div class='associated-image'></div>
 								</div>		
@@ -148,146 +149,5 @@
 				</div>
 			</span>
 		</div>
-
-		<!-- <div class='main-header'> -->
-			<!-- <span class='partition left-100 top-bot-200'>
-				<div class='font-ailerons about-menu start-state' id='at-work'>
-					<div class='font-ailerons deadzone'>
-						At Work
-					</div>
-					<div class='submenu'>
-						<div class='submenu-option start-state has-menu'>
-							<span class='deadzone font-ailerons'>
-								Qualities
-							</span>
-							<div class='submenu-popup'>
-								<div class='nested-menu-columns'>
-									<span class='nested-menu-option'>
-										<span class='deadzone font-ailerons'>
-											Personable
-										</span>
-										<div class='nested-menu-option-popup'>
-											I value getting along with the people I work with very highly and put effort into ensuring that is the case.
-										</div>
-									</span>
-									<span class='nested-menu-option'>
-										<span class='deadzone font-ailerons'>
-											Flexible
-										</span>
-										<div class='nested-menu-option-popup'>
-											Willing and able to adapt my coding style to any conventions. Comfortable working with legacy and/or undocumented codebases.
-										</div>
-									</span>
-									<span class='nested-menu-option'>
-										<span class='deadzone font-ailerons'>
-											Exacting
-										</span>
-										<div class='nested-menu-option-popup'>
-											Will work hard to ensure that I only have to solve a problem once.
-										</div>
-									</span>
-								</div>
-							</div>
-						</div>
-						<div class='submenu-option start-state has-menu'>
-							<span class='deadzone font-ailerons'>
-								Proficiencies
-							</span>
-							<div class='submenu-popup'>
-								<div class='nested-menu-columns'>
-									<span class='nested-menu-option'>
-										<span class='deadzone font-ailerons'>
-											Languages
-										</span>
-										<div class='nested-menu-option-popup'>
-											C/C++
-											<br/>
-											Python
-											<br/>
-											Javascript
-											<br/>
-											HTML5/CSS3
-											<br/>
-											SQL
-											<br/>
-											Coldfusion
-										</div>
-									</span>
-									<span class='nested-menu-option'>
-										<span class='deadzone font-ailerons'>
-											Source Control
-										</span>
-										<div class='nested-menu-option-popup'>
-											Git
-											<br/>
-											SVN
-										</div>
-									</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</span>
-			<span class='partition right-100 top-bot-200'>
-				<div class='font-ailerons about-menu start-state' id='after-work'>
-					<div class='font-ailerons deadzone'>
-						After Work
-					</div>
-					<div class='submenu'>
-						<div class='submenu-option'>
-							<span class='deadzone font-ailerons'>
-								Running
-							</span>
-							<div class='submenu-popup'>
-								This is my meditation, I usually run distance but <br/>have been trying to incorporate sprinting as much as<br/>possible in my routine.
-							</div>
-						</div>
-						<div class='submenu-option'>
-							<span class='deadzone font-ailerons'>
-								Programming Projects
-							</span>
-							<div class='submenu-popup'>
-								I make sure to push my boundaries and experiment with <br/>techniques/languages/paradigms as much as possible. <br/>Refer to the <embedded class='page-link' onclick=toProjects()>projects</embedded> section for some examples.
-							</div>
-						</div>
-						<div class='submenu-option'>
-							<span class='deadzone font-ailerons'>
-								Metalworking
-							</span>
-							<div class='submenu-popup'>
-								Being able to create something in the physical world <br/>is at times a welcome counterpoint to my work in the digital one. 
-							</div>
-						</div>
-						<div class='submenu-option'>
-							<span class='deadzone font-ailerons'>
-								Videogaming
-							</span>
-							<div class='submenu-popup'>
-								I've been playing games since I was I was four--<br/>going from Treasure Mountain to Logical Journey<br/> of the Zoombinis to Mariokart 64 to Limbo <br/>and everything in between.
-							</div>
-						</div>
-						<div class='submenu-option'>
-							<span class='deadzone font-ailerons'>
-								Reading
-							</span>
-							<div class='submenu-popup'>
-								I love Science Fiction. 
-								<br/>The Foundation series by Isaac Asimov alone contains 3 of my 
-								<br/>favorite books.(In my opinion, it should also be 
-								<br/>required reading in schools, but that's another matter.)
-								<br/>Not only SciFi though!
-								<br/>Some notables are "The Flamingos Smile" by Stephen Jay Gould,
-								<br/> any biography by Walter Isaacson, and in the programming world,
-								<br/>"Code: The Secret Language of Software and Hardware" by Charles Petzold.
-								<br/> Of course there are many others, but there's only so much time 
-								<br/>(and screen space)
-							</div>
-						</div>
-					</div>
-				</div>
-			</span> -->
-			<!-- <div class='font-ailerons button-back' onclick='toIndex()'>Back To Index</div> -->
-		<!-- </div> -->
 	</body>
 </html>

@@ -169,13 +169,10 @@ His behance profile: https://www.behance.net/agonz*/
 		url('../assets/fonts/Ailerons-Typeface.woff') format("woff"),
 		url('../assets/fonts/Ailerons-Typeface.otf') format("opentype");
 }
-@font-face{
-	font-family: 'Quicksand', sans-serif;
-	src:'https://fonts.googleapis.com/css?family=Quicksand';
-}
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 .font-ailerons{ font-family:"ailerons"; }
-.font-resume{ font-family: 'Quicksand', sans-serif; }
+.font-resume{ font-family: "Quicksand", sans-serif; }
 
 /*From Stack Overflow Question #826782*/
 .no-select {
