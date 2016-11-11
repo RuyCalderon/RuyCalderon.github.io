@@ -9,10 +9,10 @@ His behance profile: https://www.behance.net/agonz*/
 }
 @font-face{
 	font-family:'brasilia';
-	src:url('../assets/fonts/brasilia.eot?#iefix') format('embedded-opentype'),
-		url('../assets/fonts/brasilia.ttf') format('truetype'),
-		url('../assets/fonts/brasilia.woff') format('woff'),
-		url('../assets/fonts/brasilia.otf') format('opentype');
+	src:url('../assets/fonts/Brasilia.eot?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/Brasilia.ttf') format('truetype'),
+		url('../assets/fonts/Brasilia.woff') format('woff'),
+		url('../assets/fonts/Brasilia.otf') format('opentype');
 }
 .font-ailerons{
 	font-family:"ailerons";
