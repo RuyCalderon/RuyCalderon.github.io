@@ -13,13 +13,13 @@ $(document).ready(function(){
 
 
 
-	$('.section-label-tiny').on('click',function(){
-		var current = $(this).next().find('.content-text').css('display');
-		if(current == 'none'){
-			$(this).next().find('.content-text').css('display','block');
-		}
-		else{
-			$(this).next().find('.content-text').css('display','none');
-		}
-	});
+	// $('.section-label-tiny').on('click',function(){
+	// 	var current = $(this).next().find('.content-text').css('display');
+	// 	if(current == 'none'){
+	// 		$(this).next().find('.content-text').css('display','block');
+	// 	}
+	// 	else{
+	// 		$(this).next().find('.content-text').css('display','none');
+	// 	}
+	// });
 });
