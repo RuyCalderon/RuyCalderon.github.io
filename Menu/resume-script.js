@@ -199,6 +199,8 @@ $(document).ready(function(){
 		}
 	});
 
+	
+
 	var Data={};
 	var Name = 'Ruy Gaspar Calderon';
 	var ContactInfo = {'Phone':['847','207','8622'], 'Email':'ruy.calderon@gmail.com','Address':['494 Park Ave', 'Glencoe Il', '60022'],'website':'RuyCalderon.github.io'};
