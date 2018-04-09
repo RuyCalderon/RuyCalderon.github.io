@@ -10,8 +10,8 @@ $(document).ready(function(event) {
 	$('.main-header').find('.navbar-option').each(function(){
 
 		if($(this).prev().length){
-			var previousLeft = parseFloat($(this).prev().css('left').replace('px',''));
-			var divWidth = parseFloat($('.main-header').css('width').replace('px','')*0.2);
+			var previousLeft = domStrToFloat($(this).prev().css('left'));
+			var divWidth = domStrToFloat($('.main-header').css('width'))*0.2;
 
 
 			//for ie
@@ -19,13 +19,13 @@ $(document).ready(function(event) {
 				previousLeft = parseFloat($(this).prev().prop('clientLeft'));
 			}
 			if(divWidth.toString() == 'NaN'){
-				var divWidth = parseFloat($('.main-header').css('width').replace('px','')*0.2);
+				var divWidth = domStrToFloat($('.main-header').css('width'))*0.2;
 			}
 			$(this).css('left', (previousLeft + divWidth).toString() + 'px');
 		}
 		$(this).mousemove(function(event){
-			var height = parseFloat($(this).css('height').replace('px',''));
-			var width = parseFloat($(this).css('width').replace('px',''));
+			var height = domStrToFloat($(this).css('height'));
+			var width = domStrToFloat($(this).css('width'));
 			var mouseLocationX = event.originalEvent.offsetX;
 			var mouseLocationY = event.originalEvent.offsetY;
 
@@ -95,4 +95,9 @@ function toLD34(){
 
 function toAboutMe(){
 	window.location='Menu/about.html'
+}
+
+function toTesseract()
+{
+	window.location = 'Portfolio/Tesseract.html'
 }

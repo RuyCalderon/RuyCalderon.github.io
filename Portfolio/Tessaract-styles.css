@@ -1,0 +1,88 @@
+
+.custom-css{all:unset;}
+.resume{ text-align:center; font-size:18px; height:100%}
+.change-settings{ font-size:18px; margin-top:9px;}
+.options-controls > .row{ font-size:22px;}
+.text-size-small{ font-size:75%;}
+.cursor-pointer{ cursor:pointer;}
+
+.header-left{position:fixed; top:2%; height:5%; left:2%; width:15%;}
+.header-right{position:fixed; top:2%; height:5%; right:2%; width:15%; text-align:right; padding-right:4px;}
+
+.button-left{	cursor:pointer; border-color:#ADA7AD; border-style:solid; 	border-width:0px 1px 1px 0px;}
+.button-left:hover{ font-size:18px;}
+.button-left:active{ font-size:14px; 	border-width:1px 0px 0px 1px;}
+
+.button-right{	cursor:pointer; border-color:#ADA7AD; border-style:solid; 	border-width:0px 0px 1px 1px;}
+.button-right:hover{ font-size:18px;}
+.button-right:active{ font-size:14px; 	border-width:1px 1px 0px 0px;}
+
+.button-ready{ font-size:24px; }
+.button-right.button-ready:hover{font-size:26px;}
+.button-right.button-ready:active{font-size:22px;}
+
+
+.button-interior{  cursor:pointer; border-color:#ADA7AD; border-style:solid; border-width:0px 1px 1px 1px;}
+.button-interior:hover{	font-size:32px;}
+.button-interior:active{	font-size:28px; border-width:1px 0px 0px 0px;}
+
+.row{		position:relative; width:100%; height:23px; padding:2px 0px 2px 0px; margin:1px 0px 1px 0px;}
+.row-small{	position:relative; width:100%; height:18px; padding:2px 0px 2px 0px; margin:1px 0px 1px 0px;}
+.row-large{	position:relative; width:100%; height:40px; padding:2px 0px 2px 0px; margin:1px 0px 1px 0px;}
+.row-XL{	position:relative; width:100%; height:60px; padding:2px 0px 2px 0px; margin:1px 0px 1px 0px;}
+
+.left-aligned{	float:left;	min-width:45%;}
+.right-aligned{	float:right; min-width:45%;}
+.center-aligned{ position:relative; display:inline-block; width:80%; left:10%; right:10%;}
+
+.underlined{ text-decoration:underline;}
+
+.section-label-small{ text-align:center; font-size:20px; font-weight:200;}
+.popup-menu .section-label-small{ font-size:16px;}
+
+.section-label-large{ text-align:center; font-size:26px; font-weight:200;}
+
+.display-main{ position:fixed; top:15%; left:2%; right:2%; height:83%;}
+#display{ width:100%; height:100%;}
+
+.popup-menu{ display:none; position:absolute; top:0%; border-style:solid; cursor:pointer; font-size:32px;}
+.button-left			+.popup-menu:hover{	display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:45%; left:0%;}
+.button-right			+.popup-menu:hover{	display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:45%; right:0%;}
+.button-interior		+.popup-menu:hover{	display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:80%; right:10%; left:10%;}
+.button-left:active		+.popup-menu{ 		display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:45%; left:0%;}
+.button-right:active	+.popup-menu{		display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:45%; right:0%;}
+.button-interior:active	+.popup-menu{		display:block; background-color:#EFEDEA; z-index:2; border-width:1px 1px 1px 1px; width:80%; right:10%; left:10%;}
+
+.popup-menu:hover >.popup-option:hover{ font-size:22px;}
+.popup-menu:hover >.popup-option:active{ font-size:18px;}
+
+.main-header{ height:25%;}
+html, body{ height:99%; width:99%; background-color:#EFEDEA;}
+
+.font-size-base{ font-size:18px;}
+
+/*Fantastic font from Adilson Gonzalez of Brazil.
+His behance profile: https://www.behance.net/agonz*/
+@font-face{
+	font-family:"ailerons";
+	src:url('../assets/fonts/Ailerons-Typeface?#iefix') format('embedded-opentype'),
+		url('../assets/fonts/Ailerons-Typeface.ttf') format("truetype"),
+		url('../assets/fonts/Ailerons-Typeface.woff') format("woff"),
+		url('../assets/fonts/Ailerons-Typeface.otf') format("opentype");
+}
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+.font-ailerons{ font-family:"ailerons"; }
+.font-resume{ font-family: "Quicksand", sans-serif; }
+
+/*From Stack Overflow Question #826782*/
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+#notification{position:fixed; left:40%; right:40%; top:40%; bottom:40%; border:1px solid black; font-family:"ailerons"; font-size: 18px; background-color:#EFEDEA; z-index:1; text-align:center; padding-top:40px;}

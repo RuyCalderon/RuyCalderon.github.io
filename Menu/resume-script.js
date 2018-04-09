@@ -8,7 +8,22 @@ function removeAllOptions(){
 	$('#education-min').attr('value',$('#education-min').attr('default-value'));
 	$('#education-max').attr('value',$('#education-max').attr('default-value'));
 }
+function toDisplayDate(rawDate){
+	var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+		
+	var m_y_Split = rawDate.split('/');
+	var month = months[parseInt(m_y_Split[0])-1];
+	var year = ((parseInt(m_y_Split[1]) > 43) ? '19':'20') + m_y_Split[1];
+	var displayDate = month + ', ' + year;
 
+	return displayDate;
+}
+function toValueFormat(rawDate){
+	var m_y_Split = rawDate.split('/');
+	var yyyy = ((parseInt(m_y_Split[1]) > 43) ? '19':'20') + m_y_Split[1];
+	var dateValue =  yyyy + m_y_Split[0];
+	return dateValue;
+}
 
 $(document).ready(function(){
 	var pageWidth = parseFloat($('.main-header').css('width').replace('px',''));
@@ -26,18 +41,96 @@ $(document).ready(function(){
 			}
 		}
 	});
-	$('.popup-option').mouseup(function(event){
+	$('#presets > .popup-option').mouseup(function(event){
+		removeAllOptions();
+		var value_selected = $(this).attr('value');
+		var value_settings = {
+		'contact-info':[],
+		'languages':[],
+		'frameworks':[],
+		'industries':[],
+		'roles':[],
+		'timeline':[],
+		'education':[]};
+		switch(value_selected){
+			case 'general':{
+				value_settings['contact-info'] = [{'internal':'phone','display':'Phone'}, 
+												  {'internal':'email','display':'Email'}];
+				value_settings.languages = [{'internal':'c++','display':'C++'},
+											{'internal':'python','display':'Python'},
+											{'internal':'javascript','display':'Javascript'}];
+				value_settings.frameworks = ['windows c++ api', {'internal':'jquery','display':'Jquery'}];
+				value_settings.industries = [	{'internal':'ecommerce','display':'ECommerce'}, 
+												{'internal':'medical','display':'Medical'}];
+				value_settings.roles = ['junior developer', 'computer programmer', 'it/developer'];
+				value_settings.timeline= ['11/13','11/16'];
+				value_settings.education= [	{'internal':'bootcamp','display':'Bootcamp'}, 
+											{'internal':'bachelors','display':'Bachelors'}];
+			}break;
+			case 'employer':{
+				value_settings['contact-info'] = [	{'internal':'phone','display':'Phone'}, 
+													{'internal':'email','display':'Email'}, 
+													{'internal':'address','display':'Address'}];
+				value_settings.languages = [{'internal':'c','display':'C'},
+											{'internal':'c++','display':'C++'},
+											{'internal':'python','display':'Python'},
+											{'internal':'javascript','display':'Javascript'},
+											{'internal':'html','display':'HTML/CSS'},
+											{'internal':'sql','display':'Sql'}];
+				value_settings.frameworks = ['windows c++ api', 'windows gdi', 'jquery'];
+				value_settings.industries = [	{'internal':'eCommerce','display':'ECommerce'}, 
+												{'internal':'medical','display':'Medical'}, 
+												{'internal':'research','display':'research'}];
+				value_settings.roles = ['junior developer', 'it/developer', 'computer programmer'];
+				value_settings.timeline= ['11/13','11/16'];
+				value_settings.education= [	{'internal':'bootcamp','display':'Bootcamp'}, 
+											{'internal':'bachelors','display':'Bachelors'}];
+			}break;
+			case 'client':{
+				value_settings['contact-info'] = [	{'internal':'phone','display':'Phone'}, 
+													{'internal':'email','display':'Email'}, 
+													{'internal':'website','display':'Website'}];
+				value_settings.languages = [{'internal':'python','display':'Python'},
+											{'internal':'javascript','display':'Javascript'},
+											{'internal':'html','display':'HTML/CSS'},
+											{'internal':'sql','display':'SQL'}];
+				value_settings.frameworks = [{'internal':'jquery','display':'JQuery'}];
+				value_settings.industries = [	{'internal':'ecommerce','display':'Ecommerce'}, 
+												{'internal':'research','display':'Research'}];
+				value_settings.roles = ['junior developer', 'computer programmer', 'contractor']
+				value_settings.timeline= ['10/14','11/16'];
+				value_settings.education= [	{'internal':'bootcamp','display':'Bootcamp'}, 
+											{'internal':'bachelors','display':'Bachelors'}];
+			}break;
+			default:{
+				//none
+			}break;
+		}
+		for(var key in value_settings){
+			if(key != 'timeline' && key != 'education'){
+				var selector = '#'+key ;
+				$(selector).html(addOption(value_settings[key][0].internal,value_settings[key][0].display));
+				$(selector).find('span[value="'+value_settings[key][0].internal + '"]').mouseup(removeOption);
+				for(var index=1; index<value_settings[key].length; ++index){
+					$(selector).find('.setting-option:last').before(value_settings[key][index].internal,value_settings[key][index].display)
+					$(selector).find('span[value="'+value_settings[key][index].internal + '"]').mouseup(removeOption);
+				}
+			}
+		}
+	});
+	$('.options-body .popup-option').mouseup(function(event){
 		var set_selector = '#set-'+$(this).parent('.popup-menu').attr('id');
 		var value_selected = $(this).attr('value');
-		
-		if($(set_selector).find('span[value="'+value_selected+'"]').length == 0){
-			if($(set_selector).find('.setting-option').length == 0){
-				$(set_selector).html(addOption(value_selected, $(this).html()));
-				$(set_selector).find('span[value="'+value_selected+'"]').mouseup(removeOption);
-			}
-			else{
-				$(set_selector).find('.setting-option:last').before(addOption(value_selected,$(this).html()));
-				$(set_selector).find('span[value="'+value_selected+'"]').mouseup(removeOption);
+		if($(set_selector).length > 0){
+			if($(set_selector).find('span[value="'+value_selected+'"]').length == 0){
+				if($(set_selector).find('.setting-option').length == 0){
+					$(set_selector).html(addOption(value_selected, $(this).html()));
+					$(set_selector).find('span[value="'+value_selected+'"]').mouseup(removeOption);
+				}
+				else{
+					$(set_selector).find('.setting-option:last').before(addOption(value_selected,$(this).html()));
+					$(set_selector).find('span[value="'+value_selected+'"]').mouseup(removeOption);
+				}
 			}
 		}
 	});
@@ -77,18 +170,31 @@ $(document).ready(function(){
 				event.preventDefault();
 		}
 	}).on('change',function(){
-		var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 		var currentValue = $(this).prop('value');
-		if(!currentValue.match(/\d\d\/\d\d/)){
-			$(this).prop('value','MM/YY');
+		var validEntry = false;
+		if(!currentValue.match(/\d\d\/\d{1,2}/)){
+			if(currentValue.length == 2){
+				currentValue = '0' + currentValue[0] + '/0' + currentValue[1];
+				$(this).prop('value',currentValue);
+				validEntry = true;
+			}
+			else{
+				$(this).prop('value','MM/YY');
+			}
 		}
 		else{
-			var m_y_Split = currentValue.split('\/');
-			var month = months[parseInt(m_y_Split[0])-1];
-			var year = ((parseInt(m_y_Split[1]) > 43) ? '19':'20') + m_y_Split[1];
-			var displayDate = month + ', ' + year;
+			validEntry = true;
+		}
+		if(validEntry){
+			if(currentValue.length == 4)
+			{
+				currentValue = currentValue.replace('/','/0');
+				$(this).prop('value',currentValue);
+			}
+			var displayDate = toDisplayDate(currentValue);
+			var dateValue = toValueFormat(currentValue);
 			var dateBound = $(this).attr('id').split('-')[1];
-			$('#set-dates').find('.' + dateBound).attr('value',year+m_y_Split[0]);
+			$('#set-dates').find('.' + dateBound).attr('value',dateValue);
 			$('#set-dates').find('.' + dateBound).html(displayDate);
 		}
 	});
